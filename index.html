@@ -19,7 +19,7 @@
 </head>
 
 
-<body onload="pedeProduto()">;
+<body>;
   <header class="header-bg">
     <div class="header">
       <a href="">Idées de Boutiques</a>
@@ -42,14 +42,30 @@
           <div class="content">
             <div class="row">
               <div class="details">
-                <span>Annabelle</span>
-                <p>Exclusive Swim Outfit</p>
+                <span id="anabelle">Annabelle</span>
+                <p>Casual Outfit</p>
               </div>
               <div class="price">$30</div>
             </div>
             <div class="buttons">
               <button>Buy now</button>
-              <button class="buy1" onClick="addToCart()">Add to cart</button>
+              <button class="buyAnnabelle" onClick="addToCart('annabelle')">Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/spring9.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="juanee">Juanee</span>
+                <p>Casual Outfit</p>
+              </div>
+              <div class="price">$40</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyJuanee" onClick="addToCart('juanee')">Add to cart</button>
             </div>
           </div>
         </div>
