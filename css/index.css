@@ -16,5 +16,9 @@ font-family: 'Varela Round', sans-serif;
 
 */
 
-
+h1{
+  text-align: center;
+  margin-top: 50px;
+  color: #06373A
+}
 

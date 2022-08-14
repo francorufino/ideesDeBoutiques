@@ -8,6 +8,13 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
+  position: relative;
+}
+
+.wrapper .cart-nav{
+  position: absolute;
+  top:-10%;
+  right: 0;;
 }
 
 .wrapper .card{

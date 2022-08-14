@@ -18,7 +18,8 @@
   <script src="https://kit.fontawesome.com/3ec62abb1f.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+
+<body onload="pedeProduto()">;
   <header class="header-bg">
     <div class="header">
       <a href="">Idées de Boutiques</a>
@@ -27,6 +28,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -47,189 +49,12 @@
             </div>
             <div class="buttons">
               <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/casual11.jpeg" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Fransuais</span>
-                <p>Exclusive ...</p>
-              </div>
-              <div class="price">$20</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/spring1.jpeg" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Fernandee</span>
-                <p>Exclusive...</p>
-              </div>
-              <div class="price">$80</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/fall1.jpeg" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Jolyn</span>
-                <p>Exclusive...</p>
-              </div>
-              <div class="price">$40</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/fall13.jpeg" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Marrie</span>
-                <p>Exclusive Swim Outfit</p>
-              </div>
-              <div class="price">$45</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/colors10.jpeg" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Suzzette</span>
-                <p>Exclusive Swim Outfit</p>
-              </div>
-              <div class="price">$35</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/summer10.png" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Lisabel</span>
-                <p>Exclusive Swim Outfit</p>
-              </div>
-              <div class="price">$55</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/summer12.png" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Roxanne</span>
-                <p>Exclusive Swim Outfit</p>
-              </div>
-              <div class="price">$65</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/fall6.jpeg" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Luccaelle</span>
-                <p>Exclusive Swim Outfit</p>
-              </div>
-              <div class="price">$40</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/colors20.jpeg" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Folina</span>
-                <p>Exclusive Swim Outfit</p>
-              </div>
-              <div class="price">$65</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/colors4.jpeg" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Desiree</span>
-                <p>Exclusive Swim Outfit</p>
-              </div>
-              <div class="price">$35</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/casual7.jpeg" alt="">
-          <div class="content">
-            <div class="row">
-              <div class="details">
-                <span>Nicolle</span>
-                <p>Exclusive Swim Outfit</p>
-              </div>
-              <div class="price">$50</div>
-            </div>
-            <div class="buttons">
-              <button>Buy now</button>
-              <button>Add to cart</button>
+              <button class="buy1" onClick="addToCart()">Add to cart</button>
             </div>
           </div>
         </div>
       </div>
-
-
+      </div>
       </div>
     </section>
   </main>
