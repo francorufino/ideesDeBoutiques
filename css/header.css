@@ -18,6 +18,33 @@
   justify-content: center;
 }
 
+.cart-nav{
+  right: 0;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+}
+
+.cart-nav .icon i{
+  color: crimson;
+  font-size: 1.125rem;
+  justify-content: center;
+}
+
+.cart-nav .item-num{
+  font-size: 1 rem;
+  font-weight: 23px;
+  padding: 5px;
+  margin: 15px;
+  width: 23px;
+  border-radius: 50%;
+  background: #ffcccc;
+  border: 1px solid #ffb3b3;
+  color: #ff7979;
+  text-align: center;
+  justify-content: center;
+}
+
 .header-menu a{
   font-size: 1.125rem;
   line-height: 1.3 ;

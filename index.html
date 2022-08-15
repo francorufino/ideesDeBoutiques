@@ -16,6 +16,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rubik:wght@300&family=Varela+Round&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/3ec62abb1f.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 </head>
 
 
@@ -28,13 +30,21 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+          <div>
+            <div class="cart-nav">
+              <div class="icon">
+                <li class="icon"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+              </div>
+              <div class="item-num item-count">0</div>
+            </div>
+
+          </div>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <h1>A perfect outfit for each occasion</h1>
+    <h1>A perfect outfit for any occasion</h1>
     <section>
       <div class="wrapper">
         <div class="card">
@@ -49,7 +59,7 @@
             </div>
             <div class="buttons">
               <button>Buy now</button>
-              <button class="buyAnnabelle" onClick="addToCart('annabelle')">Add to cart</button>
+              <button class="buyAnnabelle cart-btn" onClick="addToCart('annabelle')">Add to cart</button>
             </div>
           </div>
         </div>
@@ -65,9 +75,78 @@
             </div>
             <div class="buttons">
               <button>Buy now</button>
-              <button class="buyJuanee" onClick="addToCart('juanee')">Add to cart</button>
+              <button class="buyJuanee cart-btn" onClick="addToCart('juanee')">Add to cart</button>
             </div>
           </div>
+
+        </div>
+        <div class="card">
+          <img src="./images/fall5.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="francis">Francis</span>
+                <p>Casual Outfit</p>
+              </div>
+              <div class="price">$35</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyFrancis cart-btn" onClick="addToCart('francis')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card">
+          <img src="./images/summer1.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="suzette">Suzette</span>
+                <p>Business Outfit</p>
+              </div>
+              <div class="price">$45</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySuzette cart-btn" onClick="addToCart('suzette')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card">
+          <img src="./images/color11.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="desiree">Desiree</span>
+                <p>Casual Outfit</p>
+              </div>
+              <div class="price">$35</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyDesiree cart-btn" onClick="addToCart('desiree')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card">
+          <img src="./images/spring2.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="marrie">Marrie</span>
+                <p>Outing Outfit</p>
+              </div>
+              <div class="price">$50</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMarrie cart-btn" onClick="addToCart('marrie', '50')">Add to cart</button>
+            </div>
+          </div>
+
         </div>
       </div>
       </div>
