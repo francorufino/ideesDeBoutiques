@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Idées de Boutiques</title>
-  <meta name="description" content="Ideas for attaire for all occasions, mixing and matching pieces of clothes and accessories to end up with a beautiful and unique look">
+  <meta name="description" content="Ideas for attaire for all occasions, mixing and matching pieces of clothes and accessories to have a beautiful and unique look">
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/filter.css">
   <link rel="stylesheet" href="./css/gallery.css">
+  <link rel="stylesheet" href="./css/cart.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,19 +23,19 @@
 </head>
 
 
-<body>;
+<body>
   <header class="header-bg">
     <div class="header">
       <a href="">Idées de Boutiques</a>
       <nav>
         <ul class="header-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href=" #about">About</a></li>
           <li><a href="#contact">Contact</a></li>
           <div>
             <div class="cart-nav">
               <div class="icon">
-                <li class="icon"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                <li class="icon"><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
               </div>
               <div class="item-num item-count">0</div>
             </div>
@@ -44,16 +46,29 @@
     </div>
   </header>
   <main>
-    <h1>A perfect outfit for any occasion</h1>
+    <h1>A perfect full outfit for any occasion</h1>
+    <section class="wrapperFilter">
+      <nav>
+        <div class="items">
+          <span class="item">All</span>
+          <span class="item">Casual</span>
+          <span class="item">Business</span>
+          <span class="item">Night Out</span>
+          <span class="item">Classic</span>
+          <span class="item">Beach</span>
+          <span class="item">Gym</span>
+        </div>
+      </nav>
+    </section>
     <section>
       <div class="wrapper">
-        <div class="card">
+        <div id="annabelleCard" class="card">
           <img src="./images/casual1.jpeg" alt="">
           <div class="content">
             <div class="row">
               <div class="details">
                 <span id="anabelle">Annabelle</span>
-                <p>Casual Outfit</p>
+                <p>Relaxed</p>
               </div>
               <div class="price">$30</div>
             </div>
@@ -69,7 +84,7 @@
             <div class="row">
               <div class="details">
                 <span id="juanee">Juanee</span>
-                <p>Casual Outfit</p>
+                <p>Casual</p>
               </div>
               <div class="price">$40</div>
             </div>
@@ -86,7 +101,7 @@
             <div class="row">
               <div class="details">
                 <span id="francis">Francis</span>
-                <p>Casual Outfit</p>
+                <p>Casual</p>
               </div>
               <div class="price">$35</div>
             </div>
@@ -103,7 +118,7 @@
             <div class="row">
               <div class="details">
                 <span id="suzette">Suzette</span>
-                <p>Business Outfit</p>
+                <p>Business</p>
               </div>
               <div class="price">$45</div>
             </div>
@@ -120,7 +135,7 @@
             <div class="row">
               <div class="details">
                 <span id="desiree">Desiree</span>
-                <p>Casual Outfit</p>
+                <p>Casual</p>
               </div>
               <div class="price">$35</div>
             </div>
@@ -137,7 +152,7 @@
             <div class="row">
               <div class="details">
                 <span id="marrie">Marrie</span>
-                <p>Outing Outfit</p>
+                <p>Classic</p>
               </div>
               <div class="price">$50</div>
             </div>
@@ -158,8 +173,7 @@
   </section>
   <footer class="footer-bg">
     <div>
-      <a class="logo" href="#home">Idées de Boutiques</a></span><span> | All rights reserved
-
+      <a class="footer logo" href="#home">Idées de Boutiques</a></span><span> | All rights reserved
     </div>
   </footer>
   <script src="./script/script.js"></script>

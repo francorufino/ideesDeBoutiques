@@ -18,6 +18,10 @@
   justify-content: center;
 }
 
+.wrapper .card{
+  margin-bottom: 30px;
+}
+
 .cart-nav{
   right: 0;
   width: 130px;
@@ -32,7 +36,7 @@
 }
 
 .cart-nav .item-num{
-  font-size: 1 rem;
+  font-size: 10px;
   font-weight: 23px;
   padding: 5px;
   margin: 15px;

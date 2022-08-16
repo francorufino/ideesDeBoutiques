@@ -1,0 +1,35 @@
+.outterContainer{
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+hr{
+  margin: 20px 0;
+}
+
+.box1{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.box2{
+  flex: 5;
+}
+
+.box3{
+  flex: 1;
+  align-items: flex-end;
+}
+
+
+footer{
+ text-align: center;
+}
+
+

@@ -5,6 +5,13 @@ body{
   min-height: 100vh;
 }
 
+main{
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  
+}
+
 h1, h2, h3, p{
   margin: 0px;
 }
@@ -23,5 +30,10 @@ a{
 img{
   max-width: 100%;
   display: block;
+}
+
+img.cart{
+  width:100px;
+  border-radius: 25%;
 }
 
