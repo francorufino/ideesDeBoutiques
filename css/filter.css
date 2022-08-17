@@ -1,0 +1,35 @@
+.wrapperFilter{
+  max-width: 1000px;
+  margin: 0 auto;
+  
+}
+
+.wrapperFilter nav{
+  display: flex;
+  justify-content: center;
+}
+
+nav .items{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+nav .items .item{
+  padding: 7px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9A9B87;
+  border: 2px solid #9A9B87;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav .active, nav .items .item:hover{
+  color:#8aa32e ;
+  background:#1B4B43;
+  border-color: #1B4B43;
+}
+

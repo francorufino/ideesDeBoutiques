@@ -51,6 +51,8 @@ function getSizeRoupa() {
   const tamanhoRUser = prompt(
     'Qual o seu tamanho de roupa? PP, P, M, G, GG ou GGG',
   ).toLowerCase();
+  localStorage.setItem('myValue', tamanhoRUser);
+  window.location.href = 'index.html';
   return tamanhoRUser;
 }
 function getSizeSapato() {
@@ -111,7 +113,7 @@ function erro() {
 
 //-----------------------------------------------------------------------------------------
 
-const PRODUTOS = {
+var PRODUTOS = {
   annabelle: { preco: 30, tipo: 'casual', qdeEstoque: 100 },
   juanee: { preco: 40, tipo: 'casual', qdeEstoque: 200 },
   francis: { preco: 35, tipo: 'casual', qdeEstoque: 100 },

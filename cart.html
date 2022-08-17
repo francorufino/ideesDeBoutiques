@@ -92,6 +92,12 @@
     </div>
     <hr>
 
+
+
+
+
+
+
   </div>
 
   <footer class="footer-bg">
@@ -101,7 +107,23 @@
     </div>
   </footer>
 
+  <script>
+    var b = localStorage.getItem("myValue");
+    alert("The Value Received is " + b);
+    var resetValue = 0;
+    localStorage.setItem("myValue", resetValue);
+  </script>
 
 </body>
 
 </html>
+
+
+<!-- function getSizeRoupa() {
+  const tamanhoRUser = prompt(
+    'Qual o seu tamanho de roupa? PP, P, M, G, GG ou GGG',
+  ).toLowerCase();
+  localStorage.setItem('myValue', tamanhoRUser);
+  window.location.href = 'index.html';
+  return tamanhoRUser;
+} -->
