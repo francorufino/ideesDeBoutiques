@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
@@ -18,18 +18,23 @@
 }
 
 .wrapper .card{
-  width: calc(33% - 13px);
-  border-radius: 3px;
-  background: #9a9b87;
+  width: calc(33% - 25px);
+  border-radius: 12px;
+  background: #a8b4b8;
+  border: 6px solid #f6f6f6;
+  
 }
 
 .wrapper .card img{
   width: 100%;
-  border-radius: 3px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: 6px solid #f6f6f6;
 }
 
 .wrapper .card .content{
   padding: 10px 20px 22px 20px;
+  
 }
 
 .card .content .row, .card .content .buttons{
@@ -40,11 +45,12 @@
 .content .row .details span{
   font-size: 22px;
   font-weight: 600;
-  color: #06373A
+  color: #03396c
+  
 }
 
 .content .row .price{
-  color: #06373A;
+  color: #03396c;
   font-size: 33px;
   font-weight: 600;
 }
@@ -52,7 +58,7 @@
 .content .row .details p{
   font-size: 17px;
   font-weight: 400;
-  color:#06373A;
+  color:#03396c;
 }
 
 .content .buttons{
@@ -65,32 +71,34 @@
   padding: 10px 0;
   font-size: 17px;
   font-weight: 500;
-  border-radius: 3px;
-  border: 2px solid #8c5b65;
+  border-radius: 12px;
+  border: 2px solid #e6eae9;
   cursor:pointer;
   text-transform: uppercase;
   transition: all 0.3s ease;
 }
 
 .buttons button:first-child{
-  color: #8c5b65;
+  color: #e6eae9;
   background: none;
   margin-right: 10px;
 }
 
 .buttons button:first-child:hover{
-  color: #1B4B43 ;
-  border: 2px solid #1B4B43 ;
+  color: white ;
+  border: 2px solid #03396c ;
+  background: #03396c;
 }
 
 .buttons button:last-child{
-  color: #9a9b87;
-  background: #8c5b65;
+  color: #e6eae9;
+  background: #899ea9;
   margin-left: 10px;
 }
 
 .buttons button:last-child:hover{
-  border: 2px solid #1B4B43;
-  background: #1B4B43 ;
+  border: 2px solid #03396c;
+  background: #03396c ;
+  color: white;
 }
 

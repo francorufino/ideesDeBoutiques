@@ -8,6 +8,10 @@ rosa: #e4c6bd
 marrom: #ad8e85 
 terracota: #8c5b65
 
+https://www.color-hex.com/color-palette/45494
+https://www.color-hex.com/color-palette/1294
+https://www.fabmood.com/inspiration/blue-and-grey-sky-color/
+
 
 font-family: 'Dancing Script', cursive;
 font-family: 'Rubik', sans-serif;
@@ -19,6 +23,7 @@ font-family: 'Varela Round', sans-serif;
 h1{
   text-align: center;
   margin: 50px 0;
-  color: #06373A
+  color: #03396c;
+  font-family: 'Varela Round', sans-serif;
 }
 

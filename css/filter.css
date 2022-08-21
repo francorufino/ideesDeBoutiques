@@ -20,16 +20,22 @@ nav .items .item{
   padding: 7px 25px;
   font-size: 18px;
   font-weight: 500;
-  color: #9A9B87;
-  border: 2px solid #9A9B87;
-  border-radius: 50px;
+  color: #899ea9;
+  border: 2px solid #899ea9;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-nav .active, nav .items .item:hover{
-  color:#8aa32e ;
-  background:#1B4B43;
-  border-color: #1B4B43;
+nav .items .item:hover{
+  color: white ;
+  background:#03396c;
+  border-color: #03396c;
+}
+
+nav .items .active{
+  color: white ;
+  background:#03396c;
+  border-color: #03396c;
 }
 

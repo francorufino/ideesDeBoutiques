@@ -1,9 +1,4 @@
-let tamanhoRUser = '';
-let tamanhoSUser = 0;
-let annabelleObj = {};
-let precoProduto = 0;
 let carrinho = [];
-console.log(carrinho);
 
 function addToCart(nomeProduto) {
   const tamanhoRoupaUser = getSizeRoupa();
@@ -16,21 +11,30 @@ function addToCart(nomeProduto) {
 
   novoProduto.stringificar();
 
-  let produtoEscolhido = nomeProduto.toUpperCase();
-  carrinho.push(nomeProduto);
+  carrinho.push(novoProduto);
+  console.log(novoProduto);
   console.log(carrinho);
 
-  // alert(
-  //   `Seu item ${produtoEscolhido} adicionado ao carrinho. Você vai arrasar com essa roupa!`,
-  // );
-  // calcularParcela();
+  alert(
+    'O produto: ' +
+      JSON.stringify(novoProduto.nomeProd).toUpperCase() +
+      ' tamanho: ' +
+      JSON.stringify(novoProduto.tamanhoR) +
+      ' e sapato no: ' +
+      JSON.stringify(novoProduto.tamanhoS) +
+      ' está sendo adicionado ao seu carrinho',
+  );
+
+  //calcularParcela();
+
+  return novoProduto;
 }
 
 class Produto {
   constructor(nomeProd, tamanhoR, tamanhoS) {
     this.nomeProd = nomeProd;
     if (!PRODUTOS[nomeProd]) {
-      console.log('PRODUTO INEXISTENTE. ESCREVE DIREITO!!!');
+      console.log('PRODUTO INEXISTENTE OU MISSPELLED!!!');
     }
     this.tipo = PRODUTOS[nomeProd].tipo;
     this.preco = PRODUTOS[nomeProd].preco;
@@ -50,9 +54,9 @@ class Produto {
 function getSizeRoupa() {
   const tamanhoRUser = prompt(
     'Qual o seu tamanho de roupa? PP, P, M, G, GG ou GGG',
-  ).toLowerCase();
-  localStorage.setItem('myValue', tamanhoRUser);
-  window.location.href = 'index.html';
+  ).toUpperCase();
+  // localStorage.setItem('myValue', tamanhoRUser);
+  // window.location.href = 'index.html';
   return tamanhoRUser;
 }
 function getSizeSapato() {
@@ -61,34 +65,35 @@ function getSizeSapato() {
       'Digite o número de sapato que você usa. Trabalhamos com os tamanhos do 33 ao 40',
     ),
   );
+
   return tamanhoSUser;
 }
 
-function calcular(precoProduto, numParcelas) {
-  if (numParcelas === 0 || numParcelas === 1) {
-    const precoParcelado = precoProduto;
-    alert(
-      `Tudo bem! Você pagará uma unica parcela de $ ${precoParcelado} reais`,
-    );
-    return precoParcelado;
-  } else if (numParcelas >= 2 && numParcelas <= 5) {
-    const precoParcelado = (precoProduto / parcelaParseado).toFixed(2);
-    alert(
-      `Tudo bem! Você pagará duas parcelas sem juros de $ ${precoParcelado} reais cada`,
-    );
-    return precoParcelado;
-  } else if (numParcelas >= 6 && numParcelas <= 10) {
-    const precoParcelado = precoProduto / parcelaParseado;
-    precoParcelado = (precoParcelado + precoParcelado * 0.1).toFixed(2);
-    alert(
-      `Tudo bem! Você pagará seis parcelas com juros de 10% totalizando o valor de $ ${precoParcelado} reais cada parcela`,
-    );
-    return precoParcelado;
-  } else {
-    erro();
-    return;
-  }
-}
+// function calcular(precoProduto, numParcelas) {
+//   if (numParcelas === 0 || numParcelas === 1) {
+//     const precoParcelado = precoProduto;
+//     alert(
+//       `Tudo bem! Você pagará uma unica parcela de $ ${precoParcelado} reais`,
+//     );
+//     return precoParcelado;
+//   } else if (numParcelas >= 2 && numParcelas <= 5) {
+//     const precoParcelado = (precoProduto / parcelaParseado).toFixed(2);
+//     alert(
+//       `Tudo bem! Você pagará duas parcelas sem juros de $ ${precoParcelado} reais cada`,
+//     );
+//     return precoParcelado;
+//   } else if (numParcelas >= 6 && numParcelas <= 10) {
+//     const precoParcelado = precoProduto / parcelaParseado;
+//     precoParcelado = (precoParcelado + precoParcelado * 0.1).toFixed(2);
+//     alert(
+//       `Tudo bem! Você pagará seis parcelas com juros de 10% totalizando o valor de $ ${precoParcelado} reais cada parcela`,
+//     );
+//     return precoParcelado;
+//   } else {
+//     erro();
+//     return;
+//   }
+// }
 
 // function calcularParcela() {
 //   let parcela = prompt(
@@ -103,9 +108,9 @@ function calcular(precoProduto, numParcelas) {
 //   }
 // }
 
-function erro() {
-  alert('Uh oh! Algo deu errado. Tente novamente!');
-}
+// function erro() {
+//   alert('Uh oh! Algo deu errado. Tente novamente!');
+// }
 
 //-----------------------------------------------------------------------------------------
 
@@ -114,7 +119,7 @@ function erro() {
 //-----------------------------------------------------------------------------------------
 
 var PRODUTOS = {
-  annabelle: { preco: 30, tipo: 'casual', qdeEstoque: 100 },
+  annabelle: { preco: 30, tipo: 'relaxed', qdeEstoque: 100 },
   juanee: { preco: 40, tipo: 'casual', qdeEstoque: 200 },
   francis: { preco: 35, tipo: 'casual', qdeEstoque: 100 },
   suzette: { preco: 45, tipo: 'business', qdeEstoque: 50 },

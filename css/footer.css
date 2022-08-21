@@ -1,3 +1,14 @@
 .footer-bg{
-  background-color: #ad8e85
+  background-color: #6c8693;
 }
+
+footer{
+  padding: 40px 20px;
+  color: white;
+}
+
+footer .logo{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+}
+
