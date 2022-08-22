@@ -22,7 +22,15 @@
   border-radius: 12px;
   background: #a8b4b8;
   border: 6px solid #f6f6f6;
-  
+}
+
+.card.image.hide{
+  display: none;
+  animation: animate 0.9s ease;
+}
+
+.card.image.show{
+  animation: animate 0.9s ease;
 }
 
 .wrapper .card img{
@@ -32,9 +40,13 @@
   border-bottom: 6px solid #f6f6f6;
 }
 
+.wrapper .card:hover{
+  box-shadow: 0px 0px 20px #88aed0;
+  transition: all 0.3s ease; 
+}
+
 .wrapper .card .content{
-  padding: 10px 20px 22px 20px;
-  
+  padding: 10px 20px 22px 20px; 
 }
 
 .card .content .row, .card .content .buttons{
@@ -45,8 +57,7 @@
 .content .row .details span{
   font-size: 22px;
   font-weight: 600;
-  color: #03396c
-  
+  color: #03396c 
 }
 
 .content .row .price{
@@ -102,3 +113,11 @@
   color: white;
 }
 
+@keyframes animate{
+  0%{
+    transform: scale(0.95);
+  }
+  100%{
+    transform: scale(1)
+  }
+}
