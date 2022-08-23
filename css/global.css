@@ -3,13 +3,12 @@ body{
   font-family: 'Varela Round', sans-serif;
   background-color: #ebefed;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 main{
   max-width: 1200px;
   margin: 0 auto;
-  box-sizing: border-box;
-  
 }
 
 h1, h2, h3, p{
@@ -32,10 +31,10 @@ img{
   display: block;
 }
 
-img.cart{
+/* img.cart{
   width:100px;
   border-radius: 25%;
-}
+} */
 
 .header .logo{
   color: white;

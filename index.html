@@ -22,7 +22,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 </head>
 
-
 <body>
   <header class="header-bg">
     <div class="header">
@@ -56,7 +55,7 @@
           <span class="item" data-name="gym">Gym</span>
           <span class="item" data-name="party">Party</span>
           <span class="item active" data-name="all">All</span>
-          <span class="item" data-name="galla">Galla</span>
+          <span class="item" data-name="gala">Gala</span>
           <span class="item" data-name="classic">Classic</span>
           <span class="item" data-name="beach">Beach</span>
           <span class="item" data-name="relaxed">Relaxed</span>
@@ -66,15 +65,15 @@
     </section>
     <section>
       <div class="wrapper">
-        <div id="annabelleCard" class="card image" data-name="relaxed">
-          <img src="./images/casual1.jpeg" alt="">
+        <div id="annabelleCard" class="card image" data-name="beach">
+          <img width="300px" height="400px" src="./images/beach1.jpeg" alt="">
           <div class="content">
             <div class="row">
               <div class="details">
                 <span id="anabelle">Annabelle</span>
-                <p>Relaxed</p>
+                <p>Beach</p>
               </div>
-              <div class="price">$30</div>
+              <div class="price">$15</div>
             </div>
             <div class="buttons">
               <button>Buy now</button>
@@ -82,32 +81,51 @@
             </div>
           </div>
         </div>
-        <div class="card image" data-name="casual">
-          <img src="./images/spring9.jpeg" alt="">
+        <div class="card image" data-name="beach">
+          <img width="300px" height="400px" src="./images/beach2.jpeg" alt="">
           <div class="content">
             <div class="row">
               <div class="details">
                 <span id="juanee">Juanee</span>
-                <p>Casual</p>
+                <p>Beach</p>
               </div>
-              <div class="price">$40</div>
+              <div class="price">$17</div>
             </div>
             <div class="buttons">
               <button>Buy now</button>
               <button class="buyJuanee cart-btn" onClick="addToCart('juanee')">Add to cart</button>
             </div>
           </div>
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c1.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="bernadete">Bernadete</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$44</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyBernadete cart-btn" onClick="addToCart('bernadete')">Add to cart</button>
+            </div>
+
+
+          </div>
 
         </div>
-        <div class="card image" data-name="casual">
-          <img src="./images/fall5.jpeg" alt="">
+        <div class="card image" data-name="beach">
+          <img width="300px" height="400px" src="./images/beach3.jpeg" alt="">
           <div class="content">
             <div class="row">
               <div class="details">
                 <span id="francis">Francis</span>
-                <p>Casual</p>
+                <p>Beach</p>
               </div>
-              <div class="price">$35</div>
+              <div class="price">$18</div>
             </div>
             <div class="buttons">
               <button>Buy now</button>
@@ -117,7 +135,7 @@
 
         </div>
         <div class="card image" data-name="business">
-          <img src="./images/summer1.jpeg" alt="">
+          <img width="300px" height="400px" src="./images/business.jpeg" alt="">
           <div class="content">
             <div class="row">
               <div class="details">
@@ -134,14 +152,14 @@
 
         </div>
         <div class="card image" data-name="casual">
-          <img src="./images/color11.jpeg" alt="">
+          <img width="300px" height="400px" src="./images/casua52.jpeg" alt="">
           <div class="content">
             <div class="row">
               <div class="details">
                 <span id="desiree">Desiree</span>
                 <p>Casual</p>
               </div>
-              <div class="price">$35</div>
+              <div class="price">$30</div>
             </div>
             <div class="buttons">
               <button>Buy now</button>
@@ -149,9 +167,496 @@
             </div>
           </div>
 
+
         </div>
+
+
         <div class="card image" data-name="classic">
-          <img src="./images/spring2.jpeg" alt="">
+          <img width="300px" height="400px" src="./images/c2.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="Florence">Florence</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$49</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyFlorence cart-btn" onClick="addToCart('Florence')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual3.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="lorena">Lorena</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$35</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLorena cart-btn" onClick="addToCart('lorena')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual4.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="Laiane">Laiane</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$34</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLaiane cart-btn" onClick="addToCart('Laiane')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual5.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="heloisa">Heloisa</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$32</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyHeloisa cart-btn" onClick="addToCart('heloisa')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c3.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="antonieta">Antonieta</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$60</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAntonieta cart-btn" onClick="addToCart('antonieta')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual11.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="louise">Louise</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$36</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLouise cart-btn" onClick="addToCart('louise')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual15.png" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="sabrina">Sabrina</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$30</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySabrina cart-btn" onClick="addToCart('sabrina')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c7.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="emma">Emma</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$77</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyEmma cart-btn" onClick="addToCart('emma')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual50.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="nicole">Nicole</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$35</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyNicole cart-btn" onClick="addToCart('nicole')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c4.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="marcy">Marcy</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$65</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMarcy cart-btn" onClick="addToCart('marcy')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c14.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="andrea">Andrea</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$66</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAndrea cart-btn" onClick="addToCart('andrea')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="party">
+          <img width="300px" height="400px" src="./images/f1.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="emilly">Emilly</span>
+                <p>Party</p>
+              </div>
+              <div class="price">$30</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyEmilly cart-btn" onClick="addToCart('emilly')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual15.png" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="sabrina">Sabrina</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$30</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySabrina cart-btn" onClick="addToCart('sabrina')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual51.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="lis">Lis</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$32</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLis cart-btn" onClick="addToCart('lis')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c5.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="leone">Leone</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$48</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLeone cart-btn" onClick="addToCart('leone')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c6.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="lorrane">Lorrane</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$53</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLorrane cart-btn" onClick="addToCart('lorrane')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual52.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="jaqueline">Jaqueline</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$32</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyJaqueline cart-btn" onClick="addToCart('jaqueline')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual53.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="mirella">Mirella</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$30</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMirella cart-btn" onClick="addToCart('mirella')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual54.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="michelle">Michelle</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$37</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMichelle cart-btn" onClick="addToCart('michelle')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c8.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="blanche">Blanche</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$59</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyBlanche cart-btn" onClick="addToCart('blanche')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c9.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="brunna">Brunna</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$70</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyBrunna cart-btn" onClick="addToCart('brunna')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c11.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="Rondha">Rondha</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$61</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyRondha cart-btn" onClick="addToCart('Rondha')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual55.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="natalie">Natalie</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$36</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyNatalie cart-btn" onClick="addToCart('natalie')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c12.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="noelly">Noelly</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$63</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyNoelly cart-btn" onClick="addToCart('noelly')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/c10.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="Samantha">Samantha</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$72</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySamantha cart-btn" onClick="addToCart('Samantha')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/casual56.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="gia">Gia</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$38</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyGia cart-btn" onClick="addToCart('gia')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic2.jpeg" alt="">
           <div class="content">
             <div class="row">
               <div class="details">
@@ -167,6 +672,2021 @@
           </div>
 
         </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic3.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="sophie">Sophie</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$42</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySophie cart-btn" onClick="addToCart('sophie')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic4.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="anne">Anne</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$46</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAnne cart-btn" onClick="addToCart('anne')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic5.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="dominique">Dominique</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$42</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyDominique cart-btn" onClick="addToCart('dominique')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic6.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="charlotte">Charlotte</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$38</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyCharlotte cart-btn" onClick="addToCart('charlotte')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic7.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="catherine">Catherine</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$44</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyCatherine cart-btn" onClick="addToCart('catherine')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="Classic">
+          <img width="300px" height="400px" src="./images/classic8.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="anelise">Anelise</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$50</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAnelise cart-btn" onClick="addToCart('anelise')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic9.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="clarisse">Clarisse</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$53</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyClarisse cart-btn" onClick="addToCart('clarisse')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic10.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="violeta">Violeta</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$49</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyVioleta cart-btn" onClick="addToCart('violeta')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic11.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="aime">Aimê</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$54</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAime cart-btn" onClick="addToCart('aime')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic12.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="valentine">Valentine</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$58</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyValentine cart-btn" onClick="addToCart('valentine')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic13.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="trinity">Trinity</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$38</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyTrinity cart-btn" onClick="addToCart('trinity')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic14.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="lorrie">Lorrie</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$55</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLorrie cart-btn" onClick="addToCart('lorrie')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic15.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="fernanda">Fernanda</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$63</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyFernanda cart-btn" onClick="addToCart('fernanda')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic16.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="amanda">Amanda</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$59</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAmanda cart-btn" onClick="addToCart('amanda')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/classic50.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="gregoria">Gregoria</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$64</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyGregoria cart-btn" onClick="addToCart('gregoria')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/color11.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="alexa">Alexa</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$37</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAlexa cart-btn" onClick="addToCart('alexa')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/colors2.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="ivonne">Ivonne</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$32</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyIvonne cart-btn" onClick="addToCart('ivonne')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/colors3.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="tyssa">Tyssa</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$30</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyTyssa cart-btn" onClick="addToCart('tyssa')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/colors8.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="priscilla">Priscilla</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$35</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyPriscilla cart-btn" onClick="addToCart('priscilla')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/colors10.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="yolanee">Yolanee</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$39</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyYolanee cart-btn" onClick="addToCart('yolanee')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/colors12.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="tressa">Tressa</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$41</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyTressa cart-btn" onClick="addToCart('tressa')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/colors20.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="ruth">Ruth</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$35</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyRuth cart-btn" onClick="addToCart('ruth')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/colors50.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="paola">Paola</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$38</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyPaola cart-btn" onClick="addToCart('paola')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="party">
+          <img width="300px" height="400px" src="./images/f4.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="olga">Olga</span>
+                <p>Party</p>
+              </div>
+              <div class="price">$64</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyOlga cart-btn" onClick="addToCart('olga')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="party">
+          <img width="300px" height="400px" src="./images/f5.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="cristinne">Cristinne</span>
+                <p>Party</p>
+              </div>
+              <div class="price">$56</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyCristinne cart-btn" onClick="addToCart('cristinne')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="party">
+          <img width="300px" height="400px" src="./images/f7.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="polly">Polly</span>
+                <p>Party</p>
+              </div>
+              <div class="price">$70</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyPolly cart-btn" onClick="addToCart('polly')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="party">
+          <img width="300px" height="400px" src="./images/f2.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="daniella">Daniella</span>
+                <p>Party</p>
+              </div>
+              <div class="price">$80</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyDaniella cart-btn" onClick="addToCart('daniella')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="party">
+          <img width="300px" height="400px" src="./images/f14.png" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="dorothy">Dorothy</span>
+                <p>Party</p>
+              </div>
+              <div class="price">$85</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyDorothy cart-btn" onClick="addToCart('dorothy')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="casual">
+          <img width="300px" height="400px" src="./images/colors7.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="monique">Monique</span>
+                <p>Casual</p>
+              </div>
+              <div class="price">$38</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMonique cart-btn" onClick="addToCart('monique')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gala">
+          <img width="300px" height="400px" src="./images/g1.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="olivia">Olivia</span>
+                <p>Gala</p>
+              </div>
+              <div class="price">$99</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyOlivia cart-btn" onClick="addToCart('olivia')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="party">
+          <img width="300px" height="400px" src="./images/f15.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="selenna">Selenna</span>
+                <p>Party</p>
+              </div>
+              <div class="price">$88</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySelenna cart-btn" onClick="addToCart('selenna')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="party">
+          <img width="300px" height="400px" src="./images/f16.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="roxanna">Roxanna</span>
+                <p>Party</p>
+              </div>
+              <div class="price">$79</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyRoxanna cart-btn" onClick="addToCart('roxanna')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gala">
+          <img width="300px" height="400px" src="./images/g2.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="Amelia">Amelia</span>
+                <p>Gala</p>
+              </div>
+              <div class="price">$95</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAmelia cart-btn" onClick="addToCart('Amelia')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gym">
+          <img width="300px" height="400px" src="./images/gym1.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="tessa">Tessa</span>
+                <p>Gym</p>
+              </div>
+              <div class="price">$25</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyTessa cart-btn" onClick="addToCart('tessa')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gym">
+          <img width="300px" height="400px" src="./images/gym2.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="eva">Eva</span>
+                <p>Gym</p>
+              </div>
+              <div class="price">$27</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyEva cart-btn" onClick="addToCart('eva')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="relaxed">
+          <img width="300px" height="400px" src="./images/relaxed.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="paige">Paige</span>
+                <p>Relaxed</p>
+              </div>
+              <div class="price">$91</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyPaige cart-btn" onClick="addToCart('paige')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gym">
+          <img width="300px" height="400px" src="./images/gym3.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="angelina">Angelina</span>
+                <p>Gym</p>
+              </div>
+              <div class="price">$20</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAngelina cart-btn" onClick="addToCart('angelina')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gala">
+          <img width="300px" height="400px" src="./images/g3.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="sophia">Sophia</span>
+                <p>Gala</p>
+              </div>
+              <div class="price">$91</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySophia cart-btn" onClick="addToCart('sophia')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="relaxed">
+          <img width="300px" height="400px" src="./images/relaxed1.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="milani">Milani</span>
+                <p>Relaxed</p>
+              </div>
+              <div class="price">$29</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMilani cart-btn" onClick="addToCart('milani')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gala">
+          <img width="300px" height="400px" src="./images/g5.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="mia">Mia</span>
+                <p>Gala</p>
+              </div>
+              <div class="price">$93</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMia cart-btn" onClick="addToCart('mia')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gala">
+          <img width="300px" height="400px" src="./images/g6.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="harper">Harper</span>
+                <p>Gala</p>
+              </div>
+              <div class="price">$92</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyHarper cart-btn" onClick="addToCart('harper')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gala">
+          <img width="300px" height="400px" src="./images/g7.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="ella">Ella</span>
+                <p>Gala</p>
+              </div>
+              <div class="price">$38</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyElla cart-btn" onClick="addToCart('ella')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gala">
+          <img width="300px" height="400px" src="./images/g8.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="abigail">Abigail</span>
+                <p>Gala</p>
+              </div>
+              <div class="price">$94</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAbigail cart-btn" onClick="addToCart('abigail')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gala">
+          <img width="300px" height="400px" src="./images/g10.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="avery">Avery</span>
+                <p>Gala</p>
+              </div>
+              <div class="price">$96</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAvery cart-btn" onClick="addToCart('avery')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="relaxed">
+          <img width="300px" height="400px" src="./images/relaxed2.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="Rebecca">Rebecca</span>
+                <p>Relaxed</p>
+              </div>
+              <div class="price">$30</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyRebecca cart-btn" onClick="addToCart('Rebecca')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="gala">
+          <img width="300px" height="400px" src="./images/g11.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="aria">Aria</span>
+                <p>Gala</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAria cart-btn" onClick="addToCart('aria')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="relaxed">
+          <img width="300px" height="400px" src="./images/relaxed5.webp" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="phoenix">Phoenix</span>
+                <p>Relaxed</p>
+              </div>
+              <div class="price">$91</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyPhoenix cart-btn" onClick="addToCart('phoenix')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="classic">
+          <img width="300px" height="400px" src="./images/n399.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="penelope">Penelope</span>
+                <p>Classic</p>
+              </div>
+              <div class="price">$56</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyPenelope cart-btn" onClick="addToCart('penelope')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n1.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="choe">Choe</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyChoe cart-btn" onClick="addToCart('choe')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="relaxed">
+          <img width="300px" height="400px" src="./images/relaxed6.webp" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="logan">Logan</span>
+                <p>Relaxed</p>
+              </div>
+              <div class="price">$91</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLogan cart-btn" onClick="addToCart('logan')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n2.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="mila">Mila</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMila cart-btn" onClick="addToCart('mila')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n3.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="nora">Nora</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyNora cart-btn" onClick="addToCart('nora')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n4.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="hazel">Hazel</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyHazel cart-btn" onClick="addToCart('hazel')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n5.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="maddison">Maddison</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMaddison cart-btn" onClick="addToCart('maddison')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n6.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="nova">Nova</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyNova cart-btn" onClick="addToCart('nova')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n7.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="grace">Grace</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyGrace cart-btn" onClick="addToCart('grace')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n8.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="aurora">Aurora</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAurora cart-btn" onClick="addToCart('aurora')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n9.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="riley">Riley</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyRiley cart-btn" onClick="addToCart('riley')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n10.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="zoey">Zoey</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyZoey cart-btn" onClick="addToCart('zoey')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n11.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="willow">Willow</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyWillow cart-btn" onClick="addToCart('willow')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n12.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="hannah">Hannah</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyHannah cart-btn" onClick="addToCart('hannah')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n13.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="addison">Addison</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAddison cart-btn" onClick="addToCart('addison')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n14.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="naomi">Naomi</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyNaomi cart-btn" onClick="addToCart('naomi')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n15.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="maya">Maya</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMaya cart-btn" onClick="addToCart('maya')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n16.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="brooklyn">Brooklyn</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyBrooklyn cart-btn" onClick="addToCart('brooklyn')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n17.jpeg" alt="">
+          <div class=" content">
+            <div class="row">
+              <div class="details">
+                <span id="alice">Alice</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAlice cart-btn" onClick="addToCart('alice')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n18.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="aubrey">Aubrey</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAubrey cart-btn" onClick="addToCart('aubrey')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n19.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="autumn">Autumn</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAutumn cart-btn" onClick="addToCart('autumn')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n20.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="sadie">Sadie</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySadie cart-btn" onClick="addToCart('sadie')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n21.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="quinn">Quinn</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyQuinn cart-btn" onClick="addToCart('quinn')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n22.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="serenity">Serenity</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySerenity cart-btn" onClick="addToCart('serenity')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n23.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="cora">Cora</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyCora cart-btn" onClick="addToCart('cora')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n24.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="piper">Piper</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyPiper cart-btn" onClick="addToCart('piper')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n25.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="peyton">Peyton</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyPeyton cart-btn" onClick="addToCart('peyton')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n26.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="parker">Parker</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyParker cart-btn" onClick="addToCart('parker')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n27.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="rose">Rose</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyRose cart-btn" onClick="addToCart('rose')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n28.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="penelope">Penelope</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyPenelope cart-btn" onClick="addToCart('penelope')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n29.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="brielle">Brielle</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyBrielle cart-btn" onClick="addToCart('brielle')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n30.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="remi">Remi</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyRemi cart-btn" onClick="addToCart('remi')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n31.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="mackenzie">Mackenzie</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMackenzie cart-btn" onClick="addToCart('mackenzie')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n32.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="charlie">Charlie</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyCharlie cart-btn" onClick="addToCart('charlie')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n33.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="daisy">Daisy</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyDaisy cart-btn" onClick="addToCart('daisy')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n34.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="summer">Summer</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySummer cart-btn" onClick="addToCart('summer')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n35.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="reese">Reese</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyReese cart-btn" onClick="addToCart('reese')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n36.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="sienna">Sienna</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buySienna cart-btn" onClick="addToCart('sienna')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n37.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="kehlani">Kehlani</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyKehlani cart-btn" onClick="addToCart('kehlani')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n38.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="freya">Freya</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyFreya cart-btn" onClick="addToCart('freya')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n39.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="genevieve">Genevieve</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyGenevieve cart-btn" onClick="addToCart('genevieve')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n40.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="ember">Ember</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyEmber cart-btn" onClick="addToCart('ember')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n41.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="georgia">Georgia</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyGeorgia cart-btn" onClick="addToCart('georgia')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n42.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="catalina">Catalina</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyCatalina cart-btn" onClick="addToCart('catalina')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n43.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="ariella">Ariella</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAriella cart-btn" onClick="addToCart('ariella')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n44.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="millie">Millie</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMillie cart-btn" onClick="addToCart('millie')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n45.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="june">June</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyJune cart-btn" onClick="addToCart('june')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n46.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="juliette">Juliette</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyJuliette cart-btn" onClick="addToCart('juliette')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n48.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="molly">Molly</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMolly cart-btn" onClick="addToCart('molly')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n49.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="taylor">Taylor</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyTaylor cart-btn" onClick="addToCart('taylor')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n60.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="margot">Margot</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMargot cart-btn" onClick="addToCart('margot')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n61.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="blake">Blake</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyBlake cart-btn" onClick="addToCart('blake')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n62.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="noelle">Noelle</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyNoelle cart-btn" onClick="addToCart('noelle')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n63.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="london">London</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLondon cart-btn" onClick="addToCart('london')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n64.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="zuri">Zuri</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyZuri cart-btn" onClick="addToCart('zuri')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n65.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="zara">Zara</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyZara cart-btn" onClick="addToCart('zara')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n66.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="leila">Leila</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLeila cart-btn" onClick="addToCart('leila')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n67.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="kimberly">Kimberly</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyKimberly cart-btn" onClick="addToCart('kimberly')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n69.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="elsie">Elsie</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyElsie cart-btn" onClick="addToCart('elsie')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n70.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="lila">Lila</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyLila cart-btn" onClick="addToCart('lila')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n71.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="alana">Alana</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAlana cart-btn" onClick="addToCart('alana')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n72.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="hope">Hope</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyHope cart-btn" onClick="addToCart('hope')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n73.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="rachel">Rachel</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyRachel cart-btn" onClick="addToCart('rachel')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n74.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="monica">Monica</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyMonica cart-btn" onClick="addToCart('monica')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n75.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="phoebe">Phoebe</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyPhoebe cart-btn" onClick="addToCart('phoebe')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n80.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="teagan">Teagan</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyTeagan cart-btn" onClick="addToCart('teagan')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card image" data-name="business">
+          <img width="300px" height="400px" src="./images/n81.jpeg" alt="">
+          <div class="content">
+            <div class="row">
+              <div class="details">
+                <span id="adelaide">Adelaide</span>
+                <p>Business</p>
+              </div>
+              <div class="price">$97</div>
+            </div>
+            <div class="buttons">
+              <button>Buy now</button>
+              <button class="buyAdelaide cart-btn" onClick="addToCart('adelaide')">Add to cart</button>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
       </div>
       </div>
       </div>
