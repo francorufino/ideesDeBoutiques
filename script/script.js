@@ -1,8 +1,8 @@
 let carrinho = [];
+let tamanhoRoupaUser;
+let tamanhoSapatoUser;
 
 function addToCart(nomeProduto) {
-  const tamanhoRoupaUser = getSizeRoupa();
-  const tamanhoSapatoUser = getSizeSapato();
   const novoProduto = new Produto(
     nomeProduto,
     tamanhoRoupaUser,
@@ -14,18 +14,6 @@ function addToCart(nomeProduto) {
   carrinho.push(novoProduto);
   console.log(novoProduto);
   console.log(carrinho);
-
-  alert(
-    'O produto: ' +
-      JSON.stringify(novoProduto.nomeProd).toUpperCase() +
-      ' tamanho: ' +
-      JSON.stringify(novoProduto.tamanhoR) +
-      ' e sapato no: ' +
-      JSON.stringify(novoProduto.tamanhoS) +
-      ' está sendo adicionado ao seu carrinho',
-  );
-
-  //calcularParcela();
 
   return novoProduto;
 }
@@ -68,49 +56,6 @@ function getSizeSapato() {
 
   return tamanhoSUser;
 }
-
-// function calcular(precoProduto, numParcelas) {
-//   if (numParcelas === 0 || numParcelas === 1) {
-//     const precoParcelado = precoProduto;
-//     alert(
-//       `Tudo bem! Você pagará uma unica parcela de $ ${precoParcelado} reais`,
-//     );
-//     return precoParcelado;
-//   } else if (numParcelas >= 2 && numParcelas <= 5) {
-//     const precoParcelado = (precoProduto / parcelaParseado).toFixed(2);
-//     alert(
-//       `Tudo bem! Você pagará duas parcelas sem juros de $ ${precoParcelado} reais cada`,
-//     );
-//     return precoParcelado;
-//   } else if (numParcelas >= 6 && numParcelas <= 10) {
-//     const precoParcelado = precoProduto / parcelaParseado;
-//     precoParcelado = (precoParcelado + precoParcelado * 0.1).toFixed(2);
-//     alert(
-//       `Tudo bem! Você pagará seis parcelas com juros de 10% totalizando o valor de $ ${precoParcelado} reais cada parcela`,
-//     );
-//     return precoParcelado;
-//   } else {
-//     erro();
-//     return;
-//   }
-// }
-
-// function calcularParcela() {
-//   let parcela = prompt(
-//     'Você pode parcelar de 0 a 5 parcelas sem juros ou com acréscimo de 10% de juros de 6 a 10 parcelas ',
-//   );
-//   if (parcela != null) {
-//     parcelaParseado = Number(parcela);
-//     calcular(precoProduto, parcelaParseado);
-//   } else {
-//     erro();
-//     return;
-//   }
-// }
-
-// function erro() {
-//   alert('Uh oh! Algo deu errado. Tente novamente!');
-// }
 
 //-----------------------------------------------------------------------------------------
 
@@ -157,7 +102,7 @@ $('.cart-btn').on('click', function () {
         position: 'absolute',
         height: '150px',
         width: '150px',
-        'z-index': '100',
+        'z-index': '1000',
       })
       .appendTo($('body'))
       .animate(
@@ -167,7 +112,7 @@ $('.cart-btn').on('click', function () {
           width: 75,
           height: 75,
         },
-        1000,
+        2500,
         'easeInOutExpo',
       );
 
@@ -189,3 +134,42 @@ $('.cart-btn').on('click', function () {
 });
 
 //-----------------------------------------------------------------------------------------
+// $(document).ready(function () {
+//   $(window).scroll(function () {
+//     if (this.scrollY > 20) {
+//       $('.navbar').addClass('sticky');
+//     } else {
+//       $('.navbar').removeClass('sticky');
+//     }
+//     if (this.scrollY > 500) {
+//       $('.scroll-up-btn').addClass('show');
+//     } else {
+//       $('.scroll-up-btn').removeClass('show');
+//     }
+//   });
+
+// $('.scroll-up-btn').click(function () {
+//   $('html').animate({ scrollTop: 0 });
+// });
+
+// $('.menu-btn').click(function () {
+//   $('.navbar .menu').toggleClass('active');
+//   $('.menu-btn i').toggleClass('active');
+// });
+// });
+
+var myform = document.getElementById('modalForm');
+document
+  .getElementById('btnModalSub')
+  .addEventListener('click', function (event) {
+    // myform.submit();
+    event.preventDefault();
+    tamanhoRoupaUser = document.getElementById('sizeClothes').value;
+    tamanhoSapatoUser = document.getElementById('sizeShoes').value;
+    document.querySelector('.bg-modal').style.display = 'none';
+    console.log(tamanhoRoupaUser, tamanhoSapatoUser);
+  });
+
+document.querySelector('.close').addEventListener('click', function () {
+  document.querySelector('.bg-modal').style.display = 'none';
+});

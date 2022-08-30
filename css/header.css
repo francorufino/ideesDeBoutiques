@@ -1,5 +1,10 @@
 .header-bg{
   background-color: #6c8693;
+  position: fixed;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 999;
+
 }
 
 .header{
@@ -48,14 +53,11 @@
 }
 
 .cart-nav .item-num.item-count{
-  
+  display: inline;
   color: white;
   margin-top: -15px;
   margin-left: -25px;
-}
-
-
-.cart-nav .item-num.item-count .number{
+  margin-bottom: 50px;
   background-color: #03396c;
   padding: 0 6px;
   border: 1px solid #03396c;

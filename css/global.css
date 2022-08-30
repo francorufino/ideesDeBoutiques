@@ -36,6 +36,10 @@ img{
   border-radius: 25%;
 } */
 
+html{
+  scroll-behavior: smooth;
+}
+
 .header .logo{
   color: white;
   font-weight: 700;

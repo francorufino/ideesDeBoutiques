@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+/* .scroll-up-btn.show{
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 30px;
+} */
 nav .items{
   display: flex;
   flex-wrap: wrap;
@@ -39,3 +44,8 @@ nav .items .active{
   border-color: #03396c;
 }
 
+/* .navbar.sticky{
+  margin-top: 300px;
+  padding: 15px 0;
+  background: crimson;
+} */

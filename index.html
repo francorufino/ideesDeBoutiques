@@ -26,7 +26,7 @@
   <header class="header-bg">
     <div class="header">
       <a class="logo" href="">Idées de Boutiques</a>
-      <nav>
+      <nav aria-label="primary">
         <ul class="header-menu">
           <li><a href="./index.html">Home</a></li>
           <li><a href=" #about">About</a></li>
@@ -44,25 +44,47 @@
       </nav>
     </div>
   </header>
+  <div class="bg-modal">
+    <div class="modal-content">
+      <div class="close">+</div>
+      <h1>Hello gorgeous!</h1>
+      <h4>Let's get you started!</h4>
+      <form id="modalForm" action="">
+        <div class="div-form">
+          <input id="sizeClothes" type="text" placeholder="Type your clothing size">
+          <input id="sizeShoes" type="number" placeholder="Type your shoe size">
+        </div>
+        <div class="div-btn">
+          <a id="btnModalSub" href="" class=" buttom">Submit</a>
+        </div>
+        <div>
+          <h6 class="dontworry">Don't worry, you can change them later on, if you need.</h6>
+        </div>
+      </form>
+
+    </div>
+  </div>
   <main>
     <h1 class="titulo">A perfect full outfit for any occasion</h1>
-    <section class="wrapperFilter">
-      <nav>
-        <div class="items">
+    <div class="filter-bg">
+      <section class="wrapperFilter">
+        <nav aria-label="secundary">
+          <div class="items">
 
-          <span class="item" data-name="casual">Casual</span>
-          <span class="item" data-name="business">Business</span>
-          <span class="item" data-name="gym">Gym</span>
-          <span class="item" data-name="party">Party</span>
-          <span class="item active" data-name="all">All</span>
-          <span class="item" data-name="gala">Gala</span>
-          <span class="item" data-name="classic">Classic</span>
-          <span class="item" data-name="beach">Beach</span>
-          <span class="item" data-name="relaxed">Relaxed</span>
+            <span class="item" data-name="casual">Casual</span>
+            <span class="item" data-name="business">Business</span>
+            <span class="item" data-name="gym">Gym</span>
+            <span class="item" data-name="party">Party</span>
+            <span class="item active" data-name="all">All</span>
+            <span class="item" data-name="gala">Gala</span>
+            <span class="item" data-name="classic">Classic</span>
+            <span class="item" data-name="beach">Beach</span>
+            <span class="item" data-name="relaxed">Relaxed</span>
 
-        </div>
-      </nav>
-    </section>
+          </div>
+        </nav>
+      </section>
+    </div>
     <section>
       <div class="wrapper">
         <div id="annabelleCard" class="card image" data-name="beach">
@@ -1583,7 +1605,7 @@
                 <span id="zilda">Zilda</span>
                 <p>Gym</p>
               </div>
-              <div class="price">$91</div>
+              <div class="price">{}</div>
             </div>
             <div class="buttons">
               <button>Buy now</button>
