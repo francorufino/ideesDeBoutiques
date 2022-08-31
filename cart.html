@@ -36,7 +36,7 @@
               <div class="icon">
                 <li class="icon"><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
               </div>
-              <div class="item-num item-count">0</div>
+              <div id="counter-cart" class="item-num item-count carrinho">0</div>
             </div>
 
           </div>
@@ -52,7 +52,7 @@
     <h1 class="notEmpty">Shopping Cart</h1>
     <hr>
     <div class="container">
-      <div class="box1">
+      <!-- <div class="box1">
         <img class="cart" src="./images/casual1.jpeg" alt="">
       </div>
 
@@ -88,7 +88,7 @@
         <ul>
           <li>$ 45.00</li>
         </ul>
-      </div>
+      </div> -->
     </div>
     <hr>
 
@@ -106,13 +106,19 @@
 
     </div>
   </footer>
+  <script src="./script/cart.js"></script>
 
-  <script>
-    var b = localStorage.getItem("myValue");
-    alert("The Value Received is " + b);
-    var resetValue = 0;
-    localStorage.setItem("myValue", resetValue);
-  </script>
+  <!-- <script src="./script/cart.js">
+    // const shoppingCart = Number(localStorage.getItem("counter"));
+    // console.log("TESTE" + shoppingCart);
+    // alert(shoppingCart)
+
+
+    // var b = localStorage.getItem("myValue");
+    // alert("The Value Received is " + b);
+    // var resetValue = 0;
+    // localStorage.setItem("myValue", resetValue);
+  </script> -->
 
 </body>
 

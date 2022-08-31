@@ -265,7 +265,13 @@ $('.cart-btn').on('click', function () {
 
     setTimeout(function () {
       count++;
+
+      console.log(count);
+      localStorage.setItem('counter', count);
+
       $('.cart-nav .item-count').text(count);
+      $('.cart-nav .item-count.carrinho').text(count);
+      return count;
     }, 1500);
 
     imgclone.animate(
