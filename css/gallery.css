@@ -38,6 +38,8 @@
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-bottom: 6px solid #f6f6f6;
+  height: 400px;
+  
 }
 
 .wrapper .card:hover{
