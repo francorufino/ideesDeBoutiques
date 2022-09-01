@@ -1,16 +1,38 @@
+body{
+  font-size: 0.9rem;
+}
+
+img{
+  width: 110px;
+  height: 110px;
+  border-radius: 6px;
+}
+
+hr{
+  margin: 20px 0;
+  background-color: #6c8693;
+  
+}
+
+footer{
+  text-align: center;
+ }
+
 .outterContainer{
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
+  margin-top: 150px;
+  
+}
+
+.outter{
+  display: block;
 }
 .container{
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-}
-
-hr{
-  margin: 20px 0;
 }
 
 .box1{
@@ -25,11 +47,24 @@ hr{
 .box3{
   flex: 1;
   align-items: flex-end;
+  margin-left: 50px;
+}
+
+.linha:last-child{
+  display: none;
+}
+
+.show{
+  display: block;
+  text-align: center;
+  margin-top: 250px;
+}
+
+.hide{
+  display: none;
 }
 
 
-footer{
- text-align: center;
-}
+
 
 

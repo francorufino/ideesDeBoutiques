@@ -1,8 +1,8 @@
 let carrinho = [];
 let tamanhoRoupaUser;
 let tamanhoSapatoUser;
-let itemAdicionado;
 let wrapper;
+let teste;
 
 function addToCart(nomeProduto) {
   const novoProduto = new Produto(
@@ -15,6 +15,8 @@ function addToCart(nomeProduto) {
   carrinho.push(novoProduto);
   console.log(novoProduto);
   console.log(carrinho);
+
+  teste = localStorage.setItem('nomeP', 'nomeProduto');
 
   return novoProduto;
 }
@@ -87,54 +89,6 @@ var PRODUTOS = {
   },
 };
 
-//
-// $(document).ready(function () {
-//   $(window).scroll(function () {
-//     if (this.scrollY > 20) {
-//       $('.navbar').addClass('sticky');
-//     } else {
-//       $('.navbar').removeClass('sticky');
-//     }
-//     if (this.scrollY > 500) {
-//       $('.scroll-up-btn').addClass('show');
-//     } else {
-//       $('.scroll-up-btn').removeClass('show');
-//     }
-//   });
-
-// $('.scroll-up-btn').click(function () {
-//   $('html').animate({ scrollTop: 0 });
-// });
-
-// $('.menu-btn').click(function () {
-//   $('.navbar .menu').toggleClass('active');
-//   $('.menu-btn i').toggleClass('active');
-// });
-// });
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//MODAL
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-var myform = document.getElementById('modalForm');
-document
-  .getElementById('btnModalSub')
-  .addEventListener('click', function (event) {
-    // myform.submit();
-    event.preventDefault();
-    tamanhoRoupaUser = document
-      .getElementById('sizeClothes')
-      .value.toUpperCase();
-    tamanhoSapatoUser = document.getElementById('sizeShoes').value;
-    document.querySelector('.bg-modal').style.display = 'none';
-    console.log(tamanhoRoupaUser, tamanhoSapatoUser);
-  });
-
-document.querySelector('.close').addEventListener('click', function () {
-  document.querySelector('.bg-modal').style.display = 'none';
-});
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //CRIANDO OS CARDS VIA DOM E DO TAMANHO DO BANCO DE DADOS
 
@@ -198,13 +152,17 @@ for (const obj in PRODUTOS) {
   btnAddToCart.classList.add('cart-btn');
   btnAddToCart.classList.add(`buy${obj}`);
   btnAddToCart.textContent = 'ADD TO CART';
+
+  //
   btnAddToCart.addEventListener('click', function () {
     addToCart(`${obj}`);
-    itemAdicionado = document.getElementById('add-to-cart-id');
     wrapper = document.getElementById('wrapper');
     console.log(wrapper);
-    //changeColorDom(`${obj}`);
-    //mandarAddedtoCartProFimDaFila();
+    console.log('container');
+
+    const produtoEmFormatoJSON = JSON.stringify(carrinho);
+    localStorage.setItem('produto', produtoEmFormatoJSON);
+    console.log('carrinho json ' + produtoEmFormatoJSON);
   });
 
   elemPai.appendChild(divCardContainer);
@@ -287,3 +245,104 @@ $('.cart-btn').on('click', function () {
 });
 
 //-----------------------------------------------------------------------------------------
+
+//
+// $(document).ready(function () {
+//   $(window).scroll(function () {
+//     if (this.scrollY > 20) {
+//       $('.navbar').addClass('sticky');
+//     } else {
+//       $('.navbar').removeClass('sticky');
+//     }
+//     if (this.scrollY > 500) {
+//       $('.scroll-up-btn').addClass('show');
+//     } else {
+//       $('.scroll-up-btn').removeClass('show');
+//     }
+//   });
+
+// $('.scroll-up-btn').click(function () {
+//   $('html').animate({ scrollTop: 0 });
+// });
+
+// $('.menu-btn').click(function () {
+//   $('.navbar .menu').toggleClass('active');
+//   $('.menu-btn i').toggleClass('active');
+// });
+// });
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//MODAL
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// sessionStorage.setItem('shown', true);
+
+// if (!sessionStorage.getItem('shown')) {
+//   showModal();
+// } else {
+//   sessionStorage.setItem('shown', true);
+// }
+
+// function showModal() {
+
+//   document.write("<!DOCTYPE HTML>");
+//   document.write("<html>");
+//   document.write("    <head>");
+//   document.write("        <title>Test<\/title>");
+//   document.write("    <\/head>");
+//   document.write("    <body>");
+//   document.write("        <h1> Hello !!! <\/h1>");
+//   document.write("    <\/body>");
+//   document.write("<\/html>");
+
+// <div id="modalFormContainer" class="bg-modal">
+//     <div class="modal-content">
+//       <div class="close">+</div>
+//       <h1>Hello gorgeous!</h1>
+//       <h4>Let's get you started!</h4>
+//       <form id="modalForm" action="">
+//         <div class="div-form">
+//           <input id="sizeClothes" type="text" placeholder="Type your clothing size">
+//           <input id="sizeShoes" type="number" placeholder="Type your shoe size">
+//         </div>
+//         <div class="div-btn">
+//           <a id="btnModalSub" href="" class=" buttom">Submit</a>
+//         </div>
+//         <div>
+//           <h6 class="dontworry">Don't worry, you can change them later on, if you need.</h6>
+//         </div>
+//       </form>
+
+//     </div>
+//   </div>
+
+//   // var myform = document.getElementById('modalForm');
+//   // document
+//   //   .getElementById('btnModalSub')
+//   //   .addEventListener('click', function (event) {
+//   //     // myform.submit();
+//   //     event.preventDefault();
+//   //     tamanhoRoupaUser = document
+//   //       .getElementById('sizeClothes')
+//   //       .value.toUpperCase();
+//   //     tamanhoSapatoUser = document.getElementById('sizeShoes').value;
+//   //     document.querySelector('.bg-modal').style.display = 'none';
+//   //     console.log(tamanhoRoupaUser, tamanhoSapatoUser);
+//   //   });
+// }
+
+// document.querySelector('.close').addEventListener('click', function () {
+//   document.querySelector('.bg-modal').style.display = 'none';
+// });
+
+// // setTimeout(showModal, 1000);
+// // function showModal() {
+//   $('#modalFormContainer').show();
+// }
+
+// var is_modal_show = sessionStorage.getItem('alreadyShow');
+// if (is_modal_show != 'alredy shown') {
+//   $('#modalFormContainer').show();
+//   sessionStorage.setItem('alreadyShow', 'alredy shown');
+// }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
