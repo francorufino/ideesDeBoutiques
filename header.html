@@ -1,0 +1,27 @@
+<header class="header-bg">
+  <div class="header">
+    <a class="logo" href="index.html">Idées de Boutiques</a>
+    <nav aria-label="primary">
+      <ul class="header-menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <div>
+          <div class="cart-nav">
+            <div class="icon">
+              <li class="icon"><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </div>
+            <div id="counterCart" class="item-num item-count carrinho">0</div>
+          </div>
+
+        </div>
+      </ul>
+    </nav>
+  </div>
+  <script>
+    let qtdeCart = document.getElementById('counterCart');
+    let qtdeCarrinho = (qtdeCart.textContent = 0);
+    const produto = localStorage.getItem('produto');
+    const produtoObjeto = JSON.parse(produto);
+  </script>
+</header>

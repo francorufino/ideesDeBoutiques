@@ -11,7 +11,7 @@
 // }
 
 let qtdeCart = document.getElementById('counterCart');
-qtdeCart.textContent = 0;
+let qtdeCarrinho = (qtdeCart.textContent = 0);
 
 const produto = localStorage.getItem('produto');
 const produtoObjeto = JSON.parse(produto);
@@ -20,11 +20,16 @@ const nada = document.getElementById('vazio');
 
 for (let i = 0; i < produtoObjeto.length; i++) {
   qtdeCart.textContent = produtoObjeto.length;
+  const sera = produtoObjeto.length;
+  console.log('sera' + sera);
   // if (qtdeCart > 0) {
   //   nada.classList.add('hide');
   // } else {
   //   nada.classList.remove('show');
   // }
+
+  const shoppingC = localStorage.setItem('counter', sera);
+
   const img = produtoObjeto[i].imgFile;
   const nome = produtoObjeto[i].nomeProd;
   const tipo = produtoObjeto[i].tipo;
