@@ -28,8 +28,10 @@ for (let i = 0; i < produtoObjeto.length; i++) {
     sum += produtoObjeto[i].preco;
   }
 
-  const subtot = document.getElementById('subtotal-cart');
-  subtot.textContent = `$${sum.toFixed(2)}`;
+  //const subtot = document.getElementById('subtotal-cart');
+  const subtotRodape = document.getElementById('subtotal-cart-rodape');
+  //subtot.textContent = `$${sum.toFixed(2)}`;
+  subtotRodape.textContent = `$${sum.toFixed(2)}`;
 
   if (produtoObjeto.length > 0) {
     const carrinhoEstaVazio = document.getElementById('empty-cart');
