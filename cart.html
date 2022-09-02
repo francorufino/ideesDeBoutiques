@@ -41,19 +41,47 @@
       </nav>
     </div>
   </header>
-  <div class="outterContainer">
-    <h1 id="vazio" class="empty">Your cart is empty</h1>
-    <h1 class="notEmpty">Shopping Cart</h1>
-    <div id="outter">
-      <div id="container" class="container">
-      </div>
-      <hr>
+  <main id="main-cart">
+    <div class="outterContainer">
+      <section class="hide" id="empty-cart">
+        <div class="emptyCart">
+          <div class="div-frases">
+            <h1 id="vazio" class="empty">Hey beautiful,</h1>
+            <h2 id="vazio" class="empty">it looks like your</h2>
+            <h2 id="vazio" class="empty"> cart is empty</h2>
+          </div>
+          <div class="div-img">
+            <img src="./images/m2.jpeg" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="show" id="not-empty-cart">
+        <div class="container-pai-items-cart">
+          <div class="total-cart">
+            <div>
+              <h1>Your Cart</h1>
+            </div>
+            <div>
+              <span>Subtotal:</span> <span id="subtotal-cart">$0.00</span>
+            </div>
+          </div>
+          <section id="outter">
+            <div id="container" class="container">
+            </div>
+            <hr>
+          </section>
+        </div>
+      </section>
     </div>
-  </div>
+
+
+    </div>
+  </main>
   <footer class="footer-bg">
     <div>
       <a class="logo" href="#home">Idées de Boutiques</a></span><span> | All rights reserved
     </div>
+
   </footer>
   <script src="./script/cart.js"></script>
 </body>

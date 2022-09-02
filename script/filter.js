@@ -1,5 +1,5 @@
 const filterItem = document.querySelector('.items');
-const filterImg = document.querySelector('.image');
+const filterImg = document.querySelectorAll('.image');
 
 window.onload = () => {
   filterItem.onclick = (selectedItem) => {
@@ -7,9 +7,16 @@ window.onload = () => {
       filterItem.querySelector('.active').classList.remove('active');
       selectedItem.target.classList.add('active');
       let filterName = selectedItem.target.getAttribute('data-name');
-      filterImg.forEach((e) => {
-        let filterImages = e.getAttribute('data-name');
-        console.log(filterImages);
+      filterImg.forEach((image) => {
+        let filterImages = image.getAttribute('data-name');
+
+        if (filterImages == filterName || filterName == 'all') {
+          image.classList.remove('hide');
+          image.classList.add('show');
+        } else {
+          image.classList.remove('show');
+          image.classList.add('hide');
+        }
       });
     }
   };

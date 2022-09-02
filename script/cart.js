@@ -12,7 +12,7 @@
 
 let qtdeCart = document.getElementById('counterCart');
 let qtdeCarrinho = (qtdeCart.textContent = 0);
-
+let sum = 0;
 const produto = localStorage.getItem('produto');
 const produtoObjeto = JSON.parse(produto);
 
@@ -22,6 +22,29 @@ for (let i = 0; i < produtoObjeto.length; i++) {
   qtdeCart.textContent = produtoObjeto.length;
   const sera = produtoObjeto.length;
   console.log('sera' + sera);
+  console.log(typeof sera);
+  console.log(typeof produtoObjeto[i].preco);
+  if (produtoObjeto[i].preco !== 0) {
+    sum += produtoObjeto[i].preco;
+  }
+
+  const subtot = document.getElementById('subtotal-cart');
+  subtot.textContent = `$${sum.toFixed(2)}`;
+
+  if (produtoObjeto.length > 0) {
+    const carrinhoEstaVazio = document.getElementById('empty-cart');
+    const showCompras = document.getElementById('not-empty-cart');
+    carrinhoEstaVazio.classList.remove('show');
+    carrinhoEstaVazio.classList.add('hide');
+    showCompras.classList.remove('hide');
+    showCompras.classList.add('show');
+  } else {
+    carrinhoEstaVazio.classList.remove('hide');
+    carrinhoEstaVazio.classList.add('show');
+    showCompras.classList.remove('show');
+    showCompras.classList.add('hide');
+  }
+
   // if (qtdeCart > 0) {
   //   nada.classList.add('hide');
   // } else {
@@ -58,7 +81,7 @@ for (let i = 0; i < produtoObjeto.length; i++) {
   precoProdutoDiv.classList.add('box3');
   const ulPrecoProduto = document.createElement('ul');
   const liPrecoProduto = document.createElement('li');
-  liPrecoProduto.textContent = preco;
+  liPrecoProduto.textContent = '$' + preco.toFixed(2);
   const line = document.createElement('hr');
   line.classList.add('linha');
 
@@ -76,3 +99,5 @@ for (let i = 0; i < produtoObjeto.length; i++) {
   precoProdutoDiv.appendChild(ulPrecoProduto);
   ulPrecoProduto.appendChild(liPrecoProduto);
 }
+
+//localStorage.clear();
