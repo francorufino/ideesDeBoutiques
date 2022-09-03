@@ -639,7 +639,7 @@ var PRODUTOS = {
 
   alice: {
     preco: 58,
-    tipo: 'relaxed',
+    tipo: 'business',
     qdeEstoque: 200,
     imgFile: './images/n17.jpeg',
   },
