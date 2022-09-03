@@ -54,12 +54,125 @@ class Produto {
 //-----------------------------------------------------------------------------------------
 
 var PRODUTOS = {
+  pamela: {
+    preco: 25,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb.jpeg',
+  },
+
+  rachel: {
+    preco: 28,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb1.jpeg',
+  },
+
+  paris: {
+    preco: 27,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb6.jpeg',
+  },
+
+  erika: {
+    preco: 23,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb9.jpeg',
+  },
+
+  emilia: {
+    preco: 20,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb11.jpeg',
+  },
+
+  rosanna: {
+    preco: 29,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb12.jpeg',
+  },
+
+  rita: {
+    preco: 25,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb14.jpeg',
+  },
+
+  jessica: {
+    preco: 23,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb17.jpeg',
+  },
+
+  noelly: {
+    preco: 22,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb18.jpeg',
+  },
+
+  nicole: {
+    preco: 20,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb19.jpeg',
+  },
+
+  marina: {
+    preco: 28,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb20.jpeg',
+  },
+
+  berenice: {
+    preco: 27,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb21.jpeg',
+  },
+
+  anamar: {
+    preco: 23,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb22.jpeg',
+  },
+
+  amanda: {
+    preco: 29,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb23.jpeg',
+  },
+
+  aline: {
+    preco: 28,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb24.jpeg',
+  },
+
+  gloria: {
+    preco: 27,
+    tipo: 'beach',
+    qdeEstoque: 200,
+    imgFile: './images/bb910.jpeg',
+  },
+
   marcy: {
     preco: 39,
     tipo: 'classic',
     qdeEstoque: 200,
     imgFile: './images/c4.jpeg',
   },
+
   juanee: {
     preco: 50,
     tipo: 'business',
