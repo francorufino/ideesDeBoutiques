@@ -6,5 +6,60 @@ body{
 
 main{
   flex-grow: 1;
+  margin-top: 180px;
+  margin-bottom: 40px;
+  align-content: center;
+  
 }
+
+form{
+  margin-top: 30px;
+}
+
+input{
+  margin: 0;
+  padding: 6px;
+  width: 100%;
+  background: #cecece;
+}
+
+input:focus{
+  outline-color: #899ea9;
+}
+
+textarea{
+  border: none;
+  resize: none;
+  width: 100%;
+  border: 5px solid #e6eae9;
+  background: #cecece;
+  font-family: 'Varela Round', sans-serif;
+}
+
+textarea:focus{
+  outline-color: #899ea9;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  
+}
+
+#contact-img{
+  width: 400px;
+  height: 495px;
+  border: 16px solid #f6f6f6;
+  box-shadow: 0px 0px 20px #88aed0;
+}
+
+#titulo-contact{
+  margin-top: 20px;
+}
+
 

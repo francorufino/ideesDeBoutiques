@@ -32,11 +32,6 @@ img{
   display: block;
 }
 
-/* img.cart{
-  width:100px;
-  border-radius: 25%;
-} */
-
 html{
   scroll-behavior: smooth;
 }
@@ -47,7 +42,11 @@ html{
   font-size: 2rem;
   font-family:'Dancing Script', cursive ;
   text-shadow: 0px 0px 20px white
+}
 
+input{
+  margin: 0;
+  padding: 0;
 }
 
 footer{

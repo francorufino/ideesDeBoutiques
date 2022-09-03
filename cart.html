@@ -43,19 +43,19 @@
   </header>
   <main id="main-cart">
     <div class="outterContainer">
-      <section class="hide" id="empty-cart">
+      <section class="show" id="empty-cart">
         <div class="emptyCart">
           <div class="div-frases">
             <h1 id="vazio" class="empty">Hey beautiful,</h1>
-            <h2 id="vazio" class="empty">it looks like your</h2>
-            <h2 id="vazio" class="empty"> cart is empty</h2>
+            <h2 id="vazio" class="empty">oh no, it looks like </h2>
+            <h2 id="vazio" class="empty">your cart is empty</h2>
           </div>
           <div class="div-img">
-            <img src="./images/m2.jpeg" alt="">
+            <img id="empty-img" src="./images/m2.jpeg" alt="">
           </div>
         </div>
       </section>
-      <section class="show" id="not-empty-cart">
+      <section class="hide" id="not-empty-cart">
         <div class="container-pai-items-cart">
           <div class="total-cart">
             <div>
@@ -70,7 +70,6 @@
             </div>
             <hr>
           </section>
-          <hr>
           <div class="total-cart-rodape">
             <strong><span>Subtotal:</span> <span id="subtotal-cart-rodape">$0.00</span></strong>
           </div>

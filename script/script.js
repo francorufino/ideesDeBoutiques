@@ -54,41 +54,796 @@ class Produto {
 //-----------------------------------------------------------------------------------------
 
 var PRODUTOS = {
-  annabelle: {
-    preco: 30,
-    tipo: 'relaxed',
-    qdeEstoque: 100,
-    imgFile: '/images/relaxed.jpeg',
+  marcy: {
+    preco: 39,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/c4.jpeg',
   },
   juanee: {
+    preco: 50,
+    tipo: 'business',
+    qdeEstoque: 100,
+    imgFile: './images/business.jpeg',
+  },
+  louise: {
     preco: 40,
-    tipo: 'casual',
+    tipo: 'classic',
     qdeEstoque: 200,
-    imgFile: '/images/casua52.jpeg',
+    imgFile: './images/c2.jpeg',
   },
   francis: {
     preco: 35,
     tipo: 'casual',
     qdeEstoque: 100,
-    imgFile: '/images/casual53.jpeg',
+    imgFile: './images/casual3.jpeg',
+  },
+  annabelle: {
+    preco: 50,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/c7.jpeg',
   },
   suzette: {
     preco: 45,
-    tipo: 'business',
+    tipo: 'casual',
     qdeEstoque: 50,
-    imgFile: '/images/business.jpeg',
+    imgFile: './images/casual4.jpeg',
   },
   desiree: {
     preco: 35,
     tipo: 'casual',
     qdeEstoque: 100,
-    imgFile: '/images/casual3.jpeg',
+    imgFile: './images/casual5.jpeg',
   },
+  isabelle: {
+    preco: 31,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/c3.jpeg',
+  },
+
+  sabrina: {
+    preco: 32,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/casual50.jpeg',
+  },
+  andrea: {
+    preco: 28,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/c14.jpeg',
+  },
+
+  josefinne: {
+    preco: 50,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: '/images/classic7.jpeg',
+  },
+  emilly: {
+    preco: 41,
+    tipo: 'party',
+    qdeEstoque: 200,
+    imgFile: './images/f1.jpeg',
+  },
+  mirella: {
+    preco: 29,
+    tipo: 'outing',
+    qdeEstoque: 200,
+    imgFile: './images/casual54.jpeg',
+  },
+  lis: {
+    preco: 50,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/casual51.jpeg',
+  },
+  leone: {
+    preco: 41,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/c5.jpeg',
+  },
+  lorrane: {
+    preco: 40,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/c6.jpeg',
+  },
+  jaqueline: {
+    preco: 32,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/casual52.jpeg',
+  },
+  blanche: {
+    preco: 50,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/c9.jpeg',
+  },
+  bruna: {
+    preco: 53,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/c11.jpeg',
+  },
+  natalie: {
+    preco: 37,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/casual55.jpeg',
+  },
+
+  samantha: {
+    preco: 59,
+    tipo: 'outing',
+    qdeEstoque: 200,
+    imgFile: './images/c10.jpeg',
+  },
+  gia: {
+    preco: 22,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/casual56.jpeg',
+  },
+  sophie: {
+    preco: 39,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic2.jpeg',
+  },
+  florence: {
+    preco: 41,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic3.jpeg',
+  },
+  anne: {
+    preco: 48,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic4.jpeg',
+  },
+  dominique: {
+    preco: 42,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic5.jpeg',
+  },
+  charlotte: {
+    preco: 50,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic6.jpeg',
+  },
+  annelise: {
+    preco: 38,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic8.jpeg',
+  },
+
+  violetta: {
+    preco: 55,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic10.jpeg',
+  },
+  aime: {
+    preco: 43,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic11.jpeg',
+  },
+
   marrie: {
+    preco: 47,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic13.jpeg',
+  },
+
+  fernanda: {
+    preco: 58,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic15.jpeg',
+  },
+
+  gregoria: {
+    preco: 52,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/classic50.jpeg',
+  },
+  alexa: {
+    preco: 28,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/color11.jpeg',
+  },
+  ivonne: {
+    preco: 21,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/colors2.jpeg',
+  },
+  tyssa: {
+    preco: 19,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/colors3.jpeg',
+  },
+  yolanne: {
+    preco: 24,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/colors10.jpeg',
+  },
+  tressa: {
+    preco: 38,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/colors12.jpeg',
+  },
+  ruth: {
     preco: 50,
     tipo: 'outing',
     qdeEstoque: 200,
-    imgFile: '/images/classic7.jpeg',
+    imgFile: './images/colors20.jpeg',
+  },
+  paulinne: {
+    preco: 28,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/colors50.jpeg',
+  },
+
+  dorothy: {
+    preco: 68,
+    tipo: 'party',
+    qdeEstoque: 200,
+    imgFile: './images/f14.png',
+  },
+  monique: {
+    preco: 32,
+    tipo: 'casual',
+    qdeEstoque: 200,
+    imgFile: './images/colors7.jpeg',
+  },
+  olivia: {
+    preco: 70,
+    tipo: 'gala',
+    qdeEstoque: 200,
+    imgFile: './images/g1.jpeg',
+  },
+  selenna: {
+    preco: 68,
+    tipo: 'gala',
+    qdeEstoque: 200,
+    imgFile: './images/f15.jpeg',
+  },
+  roxanna: {
+    preco: 50,
+    tipo: 'outing',
+    qdeEstoque: 200,
+    imgFile: './images/f16.jpeg',
+  },
+  amelia: {
+    preco: 63,
+    tipo: 'gala',
+    qdeEstoque: 200,
+    imgFile: './images/g2.jpeg',
+  },
+  teresa: {
+    preco: 18,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gym1.jpeg',
+  },
+  eva: {
+    preco: 19,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gym2.jpeg',
+  },
+  paige: {
+    preco: 21,
+    tipo: 'relaxed',
+    qdeEstoque: 200,
+    imgFile: './images/relaxed.jpeg',
+  },
+  angelinne: {
+    preco: 23,
+    tipo: 'relaxed',
+    qdeEstoque: 200,
+    imgFile: './images/gym3.jpeg',
+  },
+
+  berta: {
+    preco: 78,
+    tipo: 'gala',
+    qdeEstoque: 200,
+    imgFile: './images/g3.jpeg',
+  },
+
+  milanni: {
+    preco: 25,
+    tipo: 'relaxed',
+    qdeEstoque: 200,
+    imgFile: './images/relaxed1.jpeg',
+  },
+
+  mia: {
+    preco: 67,
+    tipo: 'gala',
+    qdeEstoque: 200,
+    imgFile: './images/g5.jpeg',
+  },
+
+  harper: {
+    preco: 77,
+    tipo: 'gala',
+    qdeEstoque: 200,
+    imgFile: './images/g6.jpeg',
+  },
+
+  abigail: {
+    preco: 55,
+    tipo: 'party',
+    qdeEstoque: 200,
+    imgFile: './images/g8.jpeg',
+  },
+
+  rebecca: {
+    preco: 27,
+    tipo: 'relaxed',
+    qdeEstoque: 200,
+    imgFile: './images/relaxed2.jpeg',
+  },
+
+  ariel: {
+    preco: 79,
+    tipo: 'gala',
+    qdeEstoque: 200,
+    imgFile: './images/g11.jpeg',
+  },
+
+  chloe: {
+    preco: 55,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n1.jpeg',
+  },
+
+  zilda: {
+    preco: 23,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gympint.jpeg',
+  },
+
+  milla: {
+    preco: 51,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n2.jpeg',
+  },
+
+  nora: {
+    preco: 52,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n3.jpeg',
+  },
+
+  maddison: {
+    preco: 56,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n5.jpeg',
+  },
+
+  nova: {
+    preco: 50,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n6.jpeg',
+  },
+
+  dora: {
+    preco: 23,
+    tipo: 'relaxed',
+    qdeEstoque: 200,
+    imgFile: './images/gym3.jpeg',
+  },
+
+  aurora: {
+    preco: 50,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n8.jpeg',
+  },
+
+  rilley: {
+    preco: 51,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n9.jpeg',
+  },
+
+  chiara: {
+    preco: 54,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n10.jpeg',
+  },
+
+  willie: {
+    preco: 59,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n11.jpeg',
+  },
+
+  hanna: {
+    preco: 58,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n12.jpeg',
+  },
+
+  amarilles: {
+    preco: 54,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n13.jpeg',
+  },
+
+  naomi: {
+    preco: 59,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n14.jpeg',
+  },
+
+  maya: {
+    preco: 60,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n15.jpeg',
+  },
+
+  brooklyn: {
+    preco: 53,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n16.jpeg',
+  },
+
+  alice: {
+    preco: 58,
+    tipo: 'relaxed',
+    qdeEstoque: 200,
+    imgFile: './images/n17.jpeg',
+  },
+
+  aubrey: {
+    preco: 57,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n18.jpeg',
+  },
+
+  autumn: {
+    preco: 50,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n19.jpeg',
+  },
+
+  norelin: {
+    preco: 15,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gympint1.jpeg',
+  },
+
+  winter: {
+    preco: 19,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gympint10.jpeg',
+  },
+
+  ellenna: {
+    preco: 20,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gympint11.jpeg',
+  },
+
+  summer: {
+    preco: 19,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gympint15.jpeg',
+  },
+
+  brenda: {
+    preco: 17,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gympint16.jpeg',
+  },
+
+  jenniffer: {
+    preco: 18,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gympint3.jpeg',
+  },
+
+  elliott: {
+    preco: 17,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gympint4.jpeg',
+  },
+
+  zuleika: {
+    preco: 19,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gympint5.jpeg',
+  },
+
+  flora: {
+    preco: 16,
+    tipo: 'gym',
+    qdeEstoque: 200,
+    imgFile: './images/gympint6.png',
+  },
+
+  quinn: {
+    preco: 58,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/n21.jpeg',
+  },
+
+  serennetty: {
+    preco: 60,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n22.jpeg',
+  },
+
+  cora: {
+    preco: 55,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n23.jpeg',
+  },
+
+  piper: {
+    preco: 50,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n24.jpeg',
+  },
+
+  peyton: {
+    preco: 54,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n25.jpeg',
+  },
+
+  rose: {
+    preco: 51,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n27.jpeg',
+  },
+
+  pennelope: {
+    preco: 62,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n28.jpeg',
+  },
+
+  brielle: {
+    preco: 58,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n29.jpeg',
+  },
+
+  remi: {
+    preco: 54,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n30.jpeg',
+  },
+
+  mackenzie: {
+    preco: 56,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n31.jpeg',
+  },
+
+  charlie: {
+    preco: 52,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n32.jpeg',
+  },
+
+  daisy: {
+    preco: 52,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n33.jpeg',
+  },
+
+  yollie: {
+    preco: 53,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n34.jpeg',
+  },
+
+  reese: {
+    preco: 55,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n35.jpeg',
+  },
+
+  sienna: {
+    preco: 56,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n36.jpeg',
+  },
+
+  keylanny: {
+    preco: 59,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n37.jpeg',
+  },
+
+  freya: {
+    preco: 49,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/n38.jpeg',
+  },
+
+  gennevieve: {
+    preco: 58,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n39.jpeg',
+  },
+
+  ember: {
+    preco: 59,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n41.jpeg',
+  },
+
+  catalina: {
+    preco: 57,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/n42.jpeg',
+  },
+
+  ariella: {
+    preco: 48,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/n43.jpeg',
+  },
+
+  millie: {
+    preco: 42,
+    tipo: 'classic',
+    qdeEstoque: 200,
+    imgFile: './images/n44.jpeg',
+  },
+
+  june: {
+    preco: 53,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n45.jpeg',
+  },
+
+  julliet: {
+    preco: 52,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n46.jpeg',
+  },
+
+  molly: {
+    preco: 51,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n48.jpeg',
+  },
+
+  margot: {
+    preco: 50,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n60.jpeg',
+  },
+
+  london: {
+    preco: 50,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n64.jpeg',
+  },
+
+  zara: {
+    preco: 52,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n65.jpeg',
+  },
+
+  leila: {
+    preco: 50,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n66.jpeg',
+  },
+
+  ellise: {
+    preco: 56,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n69.jpeg',
+  },
+
+  lila: {
+    preco: 59,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n70.jpeg',
+  },
+
+  alanna: {
+    preco: 47,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n71.jpeg',
+  },
+
+  grettha: {
+    preco: 57,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n75.jpeg',
+  },
+
+  adelaide: {
+    preco: 53,
+    tipo: 'business',
+    qdeEstoque: 200,
+    imgFile: './images/n81.jpeg',
   },
 };
 
