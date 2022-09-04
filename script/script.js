@@ -216,12 +216,6 @@ var PRODUTOS = {
     imgFile: './images/c3.jpeg',
   },
 
-  sabrina: {
-    preco: 32,
-    tipo: 'casual',
-    qdeEstoque: 200,
-    imgFile: './images/casual50.jpeg',
-  },
   andrea: {
     preco: 28,
     tipo: 'classic',
@@ -339,31 +333,11 @@ var PRODUTOS = {
     imgFile: './images/classic8.jpeg',
   },
 
-  violetta: {
-    preco: 55,
-    tipo: 'classic',
-    qdeEstoque: 200,
-    imgFile: './images/classic10.jpeg',
-  },
   aime: {
     preco: 43,
     tipo: 'classic',
     qdeEstoque: 200,
     imgFile: './images/classic11.jpeg',
-  },
-
-  marrie: {
-    preco: 47,
-    tipo: 'classic',
-    qdeEstoque: 200,
-    imgFile: './images/classic13.jpeg',
-  },
-
-  fernanda: {
-    preco: 58,
-    tipo: 'classic',
-    qdeEstoque: 200,
-    imgFile: './images/classic15.jpeg',
   },
 
   gregoria: {
@@ -525,13 +499,6 @@ var PRODUTOS = {
     imgFile: './images/g11.jpeg',
   },
 
-  chloe: {
-    preco: 55,
-    tipo: 'business',
-    qdeEstoque: 200,
-    imgFile: './images/n1.jpeg',
-  },
-
   zilda: {
     preco: 23,
     tipo: 'gym',
@@ -544,13 +511,6 @@ var PRODUTOS = {
     tipo: 'business',
     qdeEstoque: 200,
     imgFile: './images/n2.jpeg',
-  },
-
-  nora: {
-    preco: 52,
-    tipo: 'business',
-    qdeEstoque: 200,
-    imgFile: './images/n3.jpeg',
   },
 
   maddison: {
@@ -623,32 +583,11 @@ var PRODUTOS = {
     imgFile: './images/n14.jpeg',
   },
 
-  maya: {
-    preco: 60,
-    tipo: 'business',
-    qdeEstoque: 200,
-    imgFile: './images/n15.jpeg',
-  },
-
-  brooklyn: {
-    preco: 53,
-    tipo: 'business',
-    qdeEstoque: 200,
-    imgFile: './images/n16.jpeg',
-  },
-
   alice: {
     preco: 58,
     tipo: 'business',
     qdeEstoque: 200,
     imgFile: './images/n17.jpeg',
-  },
-
-  aubrey: {
-    preco: 57,
-    tipo: 'business',
-    qdeEstoque: 200,
-    imgFile: './images/n18.jpeg',
   },
 
   autumn: {
@@ -812,32 +751,11 @@ var PRODUTOS = {
     imgFile: './images/n34.jpeg',
   },
 
-  reese: {
-    preco: 55,
-    tipo: 'business',
-    qdeEstoque: 200,
-    imgFile: './images/n35.jpeg',
-  },
-
   sienna: {
     preco: 56,
     tipo: 'business',
     qdeEstoque: 200,
     imgFile: './images/n36.jpeg',
-  },
-
-  keylanny: {
-    preco: 59,
-    tipo: 'business',
-    qdeEstoque: 200,
-    imgFile: './images/n37.jpeg',
-  },
-
-  freya: {
-    preco: 49,
-    tipo: 'classic',
-    qdeEstoque: 200,
-    imgFile: './images/n38.jpeg',
   },
 
   gennevieve: {
@@ -852,13 +770,6 @@ var PRODUTOS = {
     tipo: 'business',
     qdeEstoque: 200,
     imgFile: './images/n41.jpeg',
-  },
-
-  catalina: {
-    preco: 57,
-    tipo: 'classic',
-    qdeEstoque: 200,
-    imgFile: './images/n42.jpeg',
   },
 
   ariella: {
@@ -889,13 +800,6 @@ var PRODUTOS = {
     imgFile: './images/n46.jpeg',
   },
 
-  molly: {
-    preco: 51,
-    tipo: 'business',
-    qdeEstoque: 200,
-    imgFile: './images/n48.jpeg',
-  },
-
   margot: {
     preco: 50,
     tipo: 'business',
@@ -908,13 +812,6 @@ var PRODUTOS = {
     tipo: 'business',
     qdeEstoque: 200,
     imgFile: './images/n64.jpeg',
-  },
-
-  zara: {
-    preco: 52,
-    tipo: 'business',
-    qdeEstoque: 200,
-    imgFile: './images/n65.jpeg',
   },
 
   leila: {
@@ -964,9 +861,7 @@ var PRODUTOS = {
 //CRIANDO OS CARDS VIA DOM E DO TAMANHO DO BANCO DE DADOS
 
 let nomesProdutos = Object.keys(PRODUTOS);
-
 shuffleArray(nomesProdutos);
-
 console.log(nomesProdutos);
 
 function shuffleArray(array) {
