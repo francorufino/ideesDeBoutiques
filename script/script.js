@@ -963,7 +963,22 @@ var PRODUTOS = {
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //CRIANDO OS CARDS VIA DOM E DO TAMANHO DO BANCO DE DADOS
 
-for (const obj in PRODUTOS) {
+let nomesProdutos = Object.keys(PRODUTOS);
+
+shuffleArray(nomesProdutos);
+
+console.log(nomesProdutos);
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+for (let obj in nomesProdutos) {
+  obj = nomesProdutos[obj];
+  console.log(nomesProdutos[obj]);
   console.log(
     `${obj}: ${PRODUTOS[obj].preco}, ${PRODUTOS[obj].tipo}, ${PRODUTOS[obj].qdeEstoque}, ${PRODUTOS[obj].imgFile}`,
   );
