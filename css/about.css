@@ -44,7 +44,6 @@ h3{
 }
 
 .container-right{
-  
   width: 60%;
   margin: 10px;
   margin-left: 70px;
@@ -65,6 +64,7 @@ margin: 20px;
 .second{
   display: flex;
   margin: -25px 40px;
+  margin-left: 0;
   align-items: center;
 }
 
