@@ -527,13 +527,6 @@ var PRODUTOS = {
     imgFile: './images/n6.jpeg',
   },
 
-  dora: {
-    preco: 23,
-    tipo: 'relaxed',
-    qdeEstoque: 200,
-    imgFile: './images/gym3.jpeg',
-  },
-
   aurora: {
     preco: 50,
     tipo: 'business',

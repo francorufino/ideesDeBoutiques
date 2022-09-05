@@ -16,11 +16,16 @@ form{
   margin-top: 30px;
 }
 
+label{
+  margin-left: 30px;
+}
+
 input{
   margin: 0;
   padding: 6px;
-  width: 100%;
+  width: 90%;
   background: #cecece;
+  margin: 0 auto;
 }
 
 input:focus{
@@ -30,10 +35,12 @@ input:focus{
 textarea{
   border: none;
   resize: none;
-  width: 100%;
+  width: 90%;
   border: 5px solid #e6eae9;
   background: #cecece;
   font-family: 'Varela Round', sans-serif;
+  margin: 0 auto;
+  margin-left: 29px;
 }
 
 textarea:focus{
@@ -44,7 +51,7 @@ textarea:focus{
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -52,14 +59,48 @@ textarea:focus{
 }
 
 #contact-img{
-  width: 400px;
-  height: 495px;
-  border: 16px solid #f6f6f6;
-  box-shadow: 0px 0px 20px #88aed0;
+  width: 450px;
+  height: 518px;
+  box-shadow: none;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px
 }
 
 #titulo-contact{
   margin-top: 20px;
+  margin-left: 29px;
 }
 
+#contact-btn-submit{
+  margin-top: 20px;
+  width: 20%;
+  outline: none;
+  padding: 10px 0;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 12px;
+  border: 2px solid #e6eae9;
+  cursor:pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  color: #e6eae9;
+  background: #899ea9;
+  margin: 0  auto;
+  margin-top: 20px;
+
+}
+
+#contact-btn-submit:hover{
+  color: white ;
+  border: 2px solid #03396c ;
+  background: #03396c;
+}
+
+#form-container{
+  display: flex;
+  
+  border: 16px solid #f6f6f6;
+
+  box-shadow: 0px 0px 20px #88aed0;
+}
 
