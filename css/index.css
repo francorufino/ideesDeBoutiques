@@ -28,18 +28,20 @@ h1{
   margin-top: 200px;
 }
 
-
-
 .bg-modal{
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(108, 134, 147, 0.8);
   position: absolute;
   top:0;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+}
+
+#modal-msg{
+  margin-top: 60px;
 }
 
 .modal-content{
@@ -99,5 +101,13 @@ input:focus{
 
 .dontworry{
   color: #cecece;
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
 }
 

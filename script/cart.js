@@ -1,15 +1,3 @@
-// const shoppingC = localStorage.getItem('counter');
-// //localStorage.clear();
-// const updated = (document.querySelector('.carrinho').textContent = shoppingC);
-// if (
-//   updated === null ||
-//   updated === undefined ||
-//   updated === 0 ||
-//   updated === '0'
-// ) {
-//   document.querySelector('.carrinho').textContent = 0;
-// }
-
 let qtdeCart = document.getElementById('counterCart');
 let qtdeCarrinho = (qtdeCart.textContent = 0);
 let sum = 0;
@@ -28,9 +16,7 @@ for (let i = 0; i < produtoObjeto.length; i++) {
     sum += produtoObjeto[i].preco;
   }
 
-  //const subtot = document.getElementById('subtotal-cart');
   const subtotRodape = document.getElementById('subtotal-cart-rodape');
-  //subtot.textContent = `$${sum.toFixed(2)}`;
   subtotRodape.textContent = `$${sum.toFixed(2)}`;
 
   if (produtoObjeto.length > 0) {
@@ -46,12 +32,6 @@ for (let i = 0; i < produtoObjeto.length; i++) {
     showCompras.classList.remove('show');
     showCompras.classList.add('hide');
   }
-
-  // if (qtdeCart > 0) {
-  //   nada.classList.add('hide');
-  // } else {
-  //   nada.classList.remove('show');
-  // }
 
   const shoppingC = localStorage.setItem('counter', sera);
 

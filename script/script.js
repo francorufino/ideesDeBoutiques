@@ -5,7 +5,6 @@ let wrapper;
 let shoppingCart = localStorage.getItem('counter');
 let shoppingCartNum = Number(shoppingCart);
 let count = shoppingCartNum;
-console.log(shoppingCartNum);
 
 console.log('inicio carrinho' + shoppingCartNum);
 
@@ -855,7 +854,6 @@ var PRODUTOS = {
 
 let nomesProdutos = Object.keys(PRODUTOS);
 shuffleArray(nomesProdutos);
-console.log(nomesProdutos);
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -867,9 +865,9 @@ function shuffleArray(array) {
 for (let obj in nomesProdutos) {
   obj = nomesProdutos[obj];
   console.log(nomesProdutos[obj]);
-  console.log(
-    `${obj}: ${PRODUTOS[obj].preco}, ${PRODUTOS[obj].tipo}, ${PRODUTOS[obj].qdeEstoque}, ${PRODUTOS[obj].imgFile}`,
-  );
+  // console.log(
+  //   `${obj}: ${PRODUTOS[obj].preco}, ${PRODUTOS[obj].tipo}, ${PRODUTOS[obj].qdeEstoque}, ${PRODUTOS[obj].imgFile}`,
+  // );
 
   const elemPai = document.getElementById('wrapper');
 
@@ -929,14 +927,104 @@ for (let obj in nomesProdutos) {
 
   //
   btnAddToCart.addEventListener('click', function () {
-    addToCart(`${obj}`);
-    wrapper = document.getElementById('wrapper');
-    console.log(wrapper);
-    console.log('container');
+    if (
+      tamanhoRoupaUser &&
+      tamanhoSapatoUser &&
+      (tamanhoRoupaUser !== '' ||
+        (tamanhoRoupaUser !== ' ' && tamanhoSapatoUser !== '') ||
+        tamanhoSapatoUser !== ' ')
+    ) {
+      addToCart(`${obj}`);
+      wrapper = document.getElementById('wrapper');
 
-    const produtoEmFormatoJSON = JSON.stringify(carrinho);
-    localStorage.setItem('produto', produtoEmFormatoJSON);
-    console.log('carrinho json ' + produtoEmFormatoJSON);
+      const produtoEmFormatoJSON = JSON.stringify(carrinho);
+      localStorage.setItem('produto', produtoEmFormatoJSON);
+      console.log('carrinho json ' + produtoEmFormatoJSON);
+
+      count = 0;
+
+      //if add to cart btn clicked
+      $('.cart-btn').on('click', function () {
+        let cart = $('.cart-nav');
+        // find the img of that card which button is clicked by user
+        let imgtodrag = $(this)
+          .parent('.buttons')
+          .parent('.content')
+          .parent('.card')
+          .find('img')
+          .eq(0);
+        if (imgtodrag) {
+          // duplicate the img
+          var imgclone = imgtodrag
+            .clone()
+            .offset({
+              top: imgtodrag.offset().top,
+              left: imgtodrag.offset().left,
+            })
+            .css({
+              opacity: '0.8',
+              position: 'absolute',
+              height: '150px',
+              width: '150px',
+              'z-index': '1000',
+            })
+            .appendTo($('body'))
+            .animate(
+              {
+                top: cart.offset().top + 20,
+                left: cart.offset().left + 30,
+                width: 75,
+                height: 75,
+              },
+              2500,
+              'easeInOutExpo',
+            );
+          console.log('inicio carrinho la' + shoppingCartNum);
+          setTimeout(function () {
+            count++;
+            $('.cart-nav .item-count').text(count);
+            $('.cart-nav .item-count.carrinho').text(count);
+            return count;
+          }, 1500);
+
+          imgclone.animate(
+            {
+              width: 0,
+              height: 0,
+            },
+            function () {
+              $(this).detach();
+            },
+          );
+        }
+      });
+    } else {
+      document.body.style.overflow = 'hidden';
+
+      const modalID = document.getElementById('modalFormContainer');
+      modalID.classList.remove('hide');
+      modalID.classList.add('show');
+
+      var myform = document.getElementById('modalForm');
+      document
+        .getElementById('btnModalSub')
+        .addEventListener('click', function (event) {
+          document.body.style.overflow = 'visible';
+          // myform.submit();
+          event.preventDefault();
+          tamanhoRoupaUser = document
+            .getElementById('sizeClothes')
+            .value.toUpperCase();
+          tamanhoSapatoUser = document.getElementById('sizeShoes').value;
+          document.querySelector('.bg-modal').style.display = 'none';
+          console.log(tamanhoRoupaUser, tamanhoSapatoUser);
+
+          console.log(typeof tamanhoRoupaUser + 'oi');
+          console.log(tamanhoRoupaUser);
+          console.log(typeof tamanhoRoupaUser + 'oi');
+          console.log(tamanhoSapatoUser);
+        });
+    }
   });
 
   elemPai.appendChild(divCardContainer);
@@ -951,169 +1039,9 @@ for (let obj in nomesProdutos) {
   divContainerButtons.appendChild(btnBuyNow);
   divContainerButtons.appendChild(btnAddToCart);
 }
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//carrinho animacao:
-
-//-----------------------------------------------------------------------------------------
-
-count = 0;
-
-//if add to cart btn clicked
-$('.cart-btn').on('click', function () {
-  let cart = $('.cart-nav');
-  // find the img of that card which button is clicked by user
-  let imgtodrag = $(this)
-    .parent('.buttons')
-    .parent('.content')
-    .parent('.card')
-    .find('img')
-    .eq(0);
-  if (imgtodrag) {
-    // duplicate the img
-    var imgclone = imgtodrag
-      .clone()
-      .offset({
-        top: imgtodrag.offset().top,
-        left: imgtodrag.offset().left,
-      })
-      .css({
-        opacity: '0.8',
-        position: 'absolute',
-        height: '150px',
-        width: '150px',
-        'z-index': '1000',
-      })
-      .appendTo($('body'))
-      .animate(
-        {
-          top: cart.offset().top + 20,
-          left: cart.offset().left + 30,
-          width: 75,
-          height: 75,
-        },
-        2500,
-        'easeInOutExpo',
-      );
-    console.log('inicio carrinho la' + shoppingCartNum);
-    setTimeout(function () {
-      count++;
-      $('.cart-nav .item-count').text(count);
-      $('.cart-nav .item-count.carrinho').text(count);
-      return count;
-    }, 1500);
-
-    imgclone.animate(
-      {
-        width: 0,
-        height: 0,
-      },
-      function () {
-        $(this).detach();
-      },
-    );
-  }
-});
-
-//-----------------------------------------------------------------------------------------
-
-//
-// $(document).ready(function () {
-//   $(window).scroll(function () {
-//     if (this.scrollY > 20) {
-//       $('.navbar').addClass('sticky');
-//     } else {
-//       $('.navbar').removeClass('sticky');
-//     }
-//     if (this.scrollY > 500) {
-//       $('.scroll-up-btn').addClass('show');
-//     } else {
-//       $('.scroll-up-btn').removeClass('show');
-//     }
-//   });
-
-// $('.scroll-up-btn').click(function () {
-//   $('html').animate({ scrollTop: 0 });
-// });
-
-// $('.menu-btn').click(function () {
-//   $('.navbar .menu').toggleClass('active');
-//   $('.menu-btn i').toggleClass('active');
-// });
-// });
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//MODAL
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// sessionStorage.setItem('shown', true);
-
-// if (!sessionStorage.getItem('shown')) {
-//   showModal();
-// } else {
-//   sessionStorage.setItem('shown', true);
-// }
-
-// function showModal() {
-
-//   document.write("<!DOCTYPE HTML>");
-//   document.write("<html>");
-//   document.write("    <head>");
-//   document.write("        <title>Test<\/title>");
-//   document.write("    <\/head>");
-//   document.write("    <body>");
-//   document.write("        <h1> Hello !!! <\/h1>");
-//   document.write("    <\/body>");
-//   document.write("<\/html>");
-
-// <div id="modalFormContainer" class="bg-modal">
-//     <div class="modal-content">
-//       <div class="close">+</div>
-//       <h1>Hello gorgeous!</h1>
-//       <h4>Let's get you started!</h4>
-//       <form id="modalForm" action="">
-//         <div class="div-form">
-//           <input id="sizeClothes" type="text" placeholder="Type your clothing size">
-//           <input id="sizeShoes" type="number" placeholder="Type your shoe size">
-//         </div>
-//         <div class="div-btn">
-//           <a id="btnModalSub" href="" class=" buttom">Submit</a>
-//         </div>
-//         <div>
-//           <h6 class="dontworry">Don't worry, you can change them later on, if you need.</h6>
-//         </div>
-//       </form>
-
-//     </div>
-//   </div>
-
-//   // var myform = document.getElementById('modalForm');
-//   // document
-//   //   .getElementById('btnModalSub')
-//   //   .addEventListener('click', function (event) {
-//   //     // myform.submit();
-//   //     event.preventDefault();
-//   //     tamanhoRoupaUser = document
-//   //       .getElementById('sizeClothes')
-//   //       .value.toUpperCase();
-//   //     tamanhoSapatoUser = document.getElementById('sizeShoes').value;
-//   //     document.querySelector('.bg-modal').style.display = 'none';
-//   //     console.log(tamanhoRoupaUser, tamanhoSapatoUser);
-//   //   });
-// }
-
-// document.querySelector('.close').addEventListener('click', function () {
-//   document.querySelector('.bg-modal').style.display = 'none';
-// });
-
-// // setTimeout(showModal, 1000);
-// // function showModal() {
-//   $('#modalFormContainer').show();
-// }
-
-// var is_modal_show = sessionStorage.getItem('alreadyShow');
-// if (is_modal_show != 'alredy shown') {
-//   $('#modalFormContainer').show();
-//   sessionStorage.setItem('alreadyShow', 'alredy shown');
-// }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// var theObject = { name: { firstName: 'Mark', lastName: 'Bob' } };
+// const string = JSON.stringify(theObject);
+// alert(string);
+// const objetoo = JSON.parse(string.theObject);
+// alert(objetoo);
