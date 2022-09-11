@@ -17,7 +17,7 @@ function addToCart(nomeProduto) {
   novoProduto.stringificar();
 
   carrinho.push(novoProduto);
-  console.log(novoProduto);
+
   console.log(carrinho);
 
   return novoProduto;
@@ -236,7 +236,7 @@ var PRODUTOS = {
   },
   mirella: {
     preco: 29,
-    tipo: 'outing',
+    tipo: 'casual',
     qdeEstoque: 200,
     imgFile: './images/casual54.jpeg',
   },
@@ -285,7 +285,7 @@ var PRODUTOS = {
 
   samantha: {
     preco: 59,
-    tipo: 'outing',
+    tipo: 'classic',
     qdeEstoque: 200,
     imgFile: './images/c10.jpeg',
   },
@@ -377,7 +377,7 @@ var PRODUTOS = {
   },
   ruth: {
     preco: 50,
-    tipo: 'outing',
+    tipo: 'casual',
     qdeEstoque: 200,
     imgFile: './images/colors20.jpeg',
   },
@@ -414,7 +414,7 @@ var PRODUTOS = {
   },
   roxanna: {
     preco: 50,
-    tipo: 'outing',
+    tipo: 'party',
     qdeEstoque: 200,
     imgFile: './images/f16.jpeg',
   },
@@ -852,6 +852,10 @@ var PRODUTOS = {
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //CRIANDO OS CARDS VIA DOM E DO TAMANHO DO BANCO DE DADOS
 
+// .sizeRoupaWrapper span
+// .sizeSaptosWrapper span
+// .sizeRoupaWrapper span, .sizeSaptosWrapper span
+
 let nomesProdutos = Object.keys(PRODUTOS);
 shuffleArray(nomesProdutos);
 
@@ -910,6 +914,125 @@ for (let obj in nomesProdutos) {
   divPrecoProd.classList.add('price');
   divPrecoProd.textContent = `$${PRODUTOS[obj].preco}`;
 
+  const divSizesWrapper = document.createElement('div');
+  divSizesWrapper.setAttribute('id', 'sizes-id');
+  divSizesWrapper.classList.add('sizes');
+
+  const divRoupaSizeWrapper = document.createElement('div');
+  divRoupaSizeWrapper.setAttribute('id', 'sizeRoupaWrapper');
+  divRoupaSizeWrapper.classList.add('sizeRoupaWrapper');
+
+  const spanRoupaSize = document.createElement('span');
+  spanRoupaSize.textContent = 'size:';
+  const spanRoupaSizeXS = document.createElement('span');
+  spanRoupaSizeXS.textContent = 'XS';
+  spanRoupaSizeXS.setAttribute('id', 'xs');
+  spanRoupaSizeXS.addEventListener('click', function () {
+    tamanhoRoupaUser = 'XS';
+  });
+
+  const spanRoupaSizeS = document.createElement('span');
+  spanRoupaSizeS.textContent = 'S';
+  spanRoupaSizeS.setAttribute('id', 's');
+  spanRoupaSizeS.addEventListener('click', function () {
+    tamanhoRoupaUser = 'S';
+  });
+
+  const spanRoupaSizeM = document.createElement('span');
+  spanRoupaSizeM.textContent = 'M';
+  spanRoupaSizeM.setAttribute('id', 'm');
+  spanRoupaSizeM.addEventListener('click', function () {
+    tamanhoRoupaUser = 'M';
+  });
+
+  const spanRoupaSizeL = document.createElement('span');
+  spanRoupaSizeL.textContent = 'L';
+  spanRoupaSizeL.setAttribute('id', 'l');
+  spanRoupaSizeL.addEventListener('click', function () {
+    tamanhoRoupaUser = 'L';
+  });
+
+  const spanRoupaSizeXL = document.createElement('span');
+  spanRoupaSizeXL.textContent = 'XL';
+  spanRoupaSizeXL.setAttribute('id', 'xl');
+  spanRoupaSizeXL.addEventListener('click', function () {
+    tamanhoRoupaUser = 'XL';
+  });
+
+  // spanRoupaSize.textContent = `$${PRODUTOS[obj].tamanhoR}`;
+
+  // const divSapatoSizeWrapper = document.createElement('div');
+  // spanSapatoSize.setAttribute('id', 'sizeRoupa');
+  // spanSapatoSize.classList.add('sizeRSapato');
+  // spanSapatoSize.textContent = `$${PRODUTOS[obj].tamanhoR}`;
+
+  const divSaptosSizeWrapper = document.createElement('div');
+  divSaptosSizeWrapper.setAttribute('id', 'sizeSaptosWrapper');
+  divSaptosSizeWrapper.classList.add('sizeSaptosWrapper');
+
+  const spanSaptosSize = document.createElement('span');
+  spanSaptosSize.textContent = 'shoes:';
+  const spanSaptosSize5 = document.createElement('span');
+  spanSaptosSize5.textContent = '5';
+  spanSaptosSize5.setAttribute('id', 's5');
+  spanSaptosSize5.addEventListener('click', function () {
+    tamanhoSapatoUser = '5';
+  });
+  const spanSaptosSize55 = document.createElement('span');
+  spanSaptosSize55.textContent = '5.5';
+  spanSaptosSize55.setAttribute('id', 's5.5');
+
+  const spanSaptosSize6 = document.createElement('span');
+  spanSaptosSize6.textContent = '6';
+  spanSaptosSize6.setAttribute('id', '6');
+  spanSaptosSize6.addEventListener('click', function () {
+    tamanhoSapatoUser = '6';
+  });
+
+  const spanSaptosSize65 = document.createElement('span');
+  spanSaptosSize65.textContent = '6.5';
+  spanSaptosSize65.setAttribute('id', 's6.5');
+
+  const spanSaptosSize7 = document.createElement('span');
+  spanSaptosSize7.textContent = '7';
+  spanSaptosSize7.setAttribute('id', 's7');
+  spanSaptosSize7.addEventListener('click', function () {
+    tamanhoSapatoUser = '7';
+  });
+
+  const spanSaptosSize75 = document.createElement('span');
+  spanSaptosSize75.textContent = '7.5';
+  spanSaptosSize75.setAttribute('id', 's75');
+
+  const spanSaptosSize8 = document.createElement('span');
+  spanSaptosSize8.textContent = '8';
+  spanSaptosSize8.setAttribute('id', 's8');
+  spanSaptosSize8.addEventListener('click', function () {
+    tamanhoSapatoUser = '8';
+  });
+
+  const spanSaptosSize85 = document.createElement('span');
+  spanSaptosSize85.textContent = '8.5';
+  spanSaptosSize85.setAttribute('id', 's85');
+
+  const spanSaptosSize9 = document.createElement('span');
+  spanSaptosSize9.textContent = '9';
+  spanSaptosSize9.setAttribute('id', 's9');
+  spanSaptosSize9.addEventListener('click', function () {
+    tamanhoSapatoUser = '9';
+  });
+
+  const spanSaptosSize95 = document.createElement('span');
+  spanSaptosSize95.textContent = '9.5';
+  spanSaptosSize95.setAttribute('id', 's95');
+
+  const spanSaptosSize10 = document.createElement('span');
+  spanSaptosSize10.textContent = '10';
+  spanSaptosSize10.setAttribute('id', 's10');
+  spanSaptosSize10.addEventListener('click', function () {
+    tamanhoSapatoUser = '10';
+  });
+
   const divContainerButtons = document.createElement('div');
   divContainerButtons.setAttribute('id', 'div-cont-btns-id');
   divContainerButtons.classList.add('buttons');
@@ -925,106 +1048,84 @@ for (let obj in nomesProdutos) {
   btnAddToCart.classList.add(`buy${obj}`);
   btnAddToCart.textContent = 'ADD TO CART';
 
+  $('.sizeRoupaWrapper span').click(function () {
+    $('.sizeRoupaWrapper span').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $('.sizeSaptosWrapper span').click(function () {
+    $('.sizeSaptosWrapper span').removeClass('active');
+    $(this).addClass('active');
+  });
+
   //
   btnAddToCart.addEventListener('click', function () {
-    if (
-      tamanhoRoupaUser &&
-      tamanhoSapatoUser &&
-      (tamanhoRoupaUser !== '' ||
-        (tamanhoRoupaUser !== ' ' && tamanhoSapatoUser !== '') ||
-        tamanhoSapatoUser !== ' ')
-    ) {
-      addToCart(`${obj}`);
-      wrapper = document.getElementById('wrapper');
+    addToCart(`${obj}`);
+    wrapper = document.getElementById('wrapper');
 
-      const produtoEmFormatoJSON = JSON.stringify(carrinho);
-      localStorage.setItem('produto', produtoEmFormatoJSON);
-      console.log('carrinho json ' + produtoEmFormatoJSON);
+    count = 0;
 
-      count = 0;
-
-      //if add to cart btn clicked
-      $('.cart-btn').on('click', function () {
-        let cart = $('.cart-nav');
-        // find the img of that card which button is clicked by user
-        let imgtodrag = $(this)
-          .parent('.buttons')
-          .parent('.content')
-          .parent('.card')
-          .find('img')
-          .eq(0);
-        if (imgtodrag) {
-          // duplicate the img
-          var imgclone = imgtodrag
-            .clone()
-            .offset({
-              top: imgtodrag.offset().top,
-              left: imgtodrag.offset().left,
-            })
-            .css({
-              opacity: '0.8',
-              position: 'absolute',
-              height: '150px',
-              width: '150px',
-              'z-index': '1000',
-            })
-            .appendTo($('body'))
-            .animate(
-              {
-                top: cart.offset().top + 20,
-                left: cart.offset().left + 30,
-                width: 75,
-                height: 75,
-              },
-              2500,
-              'easeInOutExpo',
-            );
-          console.log('inicio carrinho la' + shoppingCartNum);
-          setTimeout(function () {
-            count++;
-            $('.cart-nav .item-count').text(count);
-            $('.cart-nav .item-count.carrinho').text(count);
-            return count;
-          }, 1500);
-
-          imgclone.animate(
+    //if add to cart btn clicked
+    $('.cart-btn').on('click', function () {
+      let cart = $('.cart-nav');
+      // find the img of that card which button is clicked by user
+      let imgtodrag = $(this)
+        .parent('.buttons')
+        .parent('.content')
+        .parent('.card')
+        .find('img')
+        .eq(0);
+      if (imgtodrag) {
+        // duplicate the img
+        var imgclone = imgtodrag
+          .clone()
+          .offset({
+            top: imgtodrag.offset().top,
+            left: imgtodrag.offset().left,
+          })
+          .css({
+            opacity: '0.8',
+            position: 'absolute',
+            height: '150px',
+            width: '150px',
+            'z-index': '1000',
+          })
+          .appendTo($('body'))
+          .animate(
             {
-              width: 0,
-              height: 0,
+              top: cart.offset().top + 20,
+              left: cart.offset().left + 30,
+              width: 75,
+              height: 75,
             },
-            function () {
-              $(this).detach();
-            },
+            2500,
+            'easeInOutExpo',
           );
-        }
-      });
-    } else {
-      document.body.style.overflow = 'hidden';
+        console.log('inicio carrinho la' + shoppingCartNum);
+        setTimeout(function () {
+          count++;
+          $('.cart-nav .item-count').text(count);
+          $('.cart-nav .item-count.carrinho').text(count);
+          $('.sizeRoupaWrapper span').removeClass('active');
+          $('.sizeSaptosWrapper span').removeClass('active');
+          const produtoEmFormatoJSON = JSON.stringify(carrinho);
+          localStorage.setItem('produto', produtoEmFormatoJSON);
+          console.log('carrinho json ' + produtoEmFormatoJSON);
 
-      const modalID = document.getElementById('modalFormContainer');
-      modalID.classList.remove('hide');
-      modalID.classList.add('show');
+          return count;
+        }, 1500);
 
-      var myform = document.getElementById('modalForm');
-      document
-        .getElementById('btnModalSub')
-        .addEventListener('click', function (event) {
-          document.body.style.overflow = 'visible';
-          // myform.submit();
-          event.preventDefault();
-          tamanhoRoupaUser = document
-            .getElementById('sizeClothes')
-            .value.toUpperCase();
-          tamanhoSapatoUser = document.getElementById('sizeShoes').value;
-          document.querySelector('.bg-modal').style.display = 'none';
-          console.log(tamanhoRoupaUser, tamanhoSapatoUser);
-
-          console.log(typeof tamanhoRoupaUser + 'oi');
-          console.log(tamanhoRoupaUser);
-          console.log(typeof tamanhoRoupaUser + 'oi');
-          console.log(tamanhoSapatoUser);
-        });
-    }
+        imgclone.animate(
+          {
+            width: 0,
+            height: 0,
+          },
+          function () {
+            $(this).detach();
+          },
+        );
+      }
+    });
   });
 
   elemPai.appendChild(divCardContainer);
@@ -1035,6 +1136,29 @@ for (let obj in nomesProdutos) {
   divDetailsWrapper.appendChild(spanNomeProduto);
   divDetailsWrapper.appendChild(paragTipoProduto);
   divRow.appendChild(divPrecoProd);
+
+  divContainerDescProduto.appendChild(divRoupaSizeWrapper);
+  divRoupaSizeWrapper.appendChild(spanRoupaSize);
+  divRoupaSizeWrapper.appendChild(spanRoupaSizeXS);
+  divRoupaSizeWrapper.appendChild(spanRoupaSizeS);
+  divRoupaSizeWrapper.appendChild(spanRoupaSizeM);
+  divRoupaSizeWrapper.appendChild(spanRoupaSizeL);
+  divRoupaSizeWrapper.appendChild(spanRoupaSizeXL);
+
+  divContainerDescProduto.appendChild(divSaptosSizeWrapper);
+  divSaptosSizeWrapper.appendChild(spanSaptosSize);
+  divSaptosSizeWrapper.appendChild(spanSaptosSize5);
+  //divSaptosSizeWrapper.appendChild(spanSaptosSize55);
+  divSaptosSizeWrapper.appendChild(spanSaptosSize6);
+  //divSaptosSizeWrapper.appendChild(spanSaptosSize65);
+  divSaptosSizeWrapper.appendChild(spanSaptosSize7);
+  //divSaptosSizeWrapper.appendChild(spanSaptosSize75);
+  divSaptosSizeWrapper.appendChild(spanSaptosSize8);
+  //divSaptosSizeWrapper.appendChild(spanSaptosSize85);
+  divSaptosSizeWrapper.appendChild(spanSaptosSize9);
+  //divSaptosSizeWrapper.appendChild(spanSaptosSize95);
+  divSaptosSizeWrapper.appendChild(spanSaptosSize10);
+
   divContainerDescProduto.appendChild(divContainerButtons);
   divContainerButtons.appendChild(btnBuyNow);
   divContainerButtons.appendChild(btnAddToCart);

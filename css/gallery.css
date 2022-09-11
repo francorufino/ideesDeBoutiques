@@ -41,7 +41,6 @@
   border-bottom: 6px solid #f6f6f6;
   height: 400px;
   box-shadow: none;
-  
 }
 
 .wrapper .card:hover{
@@ -74,6 +73,61 @@
   font-size: 17px;
   font-weight: 400;
   color:#03396c;
+}
+
+.sizeRoupaWrapper, .sizeSaptosWrapper{
+margin-top: 8px 0;
+width: 80%;
+font-size: 16px;
+display: flex;
+justify-content: space-between;
+}
+
+.sizeSaptosWrapper{
+  width: 100%;
+}
+
+.sizeRoupaWrapper span, .sizeSaptosWrapper span{
+  margin-top: 15px;
+  display: block;
+  color: white;
+  height: 28px;
+  width: 28px;
+  padding: 2px;
+  background: #cecece;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.sizeRoupaWrapper span:hover, .sizeSaptosWrapper span:hover{
+  color: white;
+  background: #899ea9;
+  transition: all 0.3s ease; 
+}
+
+.sizeRoupaWrapper span:first-child, .sizeSaptosWrapper span:first-child{
+  display: block;
+  color: white;
+  height: 28px;
+  width: 28px;
+  padding: 2px;
+  background: transparent;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 28px;
+  cursor: default; 
+}
+
+.sizeRoupaWrapper span.active{
+  background: #03396c;
+  display: block;
+}
+
+.sizeSaptosWrapper span.active{
+  background: #03396c;
+  display: block;
 }
 
 .content .buttons{
@@ -115,6 +169,10 @@
   border: 2px solid #03396c;
   background: #03396c ;
   color: white;
+}
+
+#xs, #s5{
+  margin-left: 15px;
 }
 
 @keyframes animate{

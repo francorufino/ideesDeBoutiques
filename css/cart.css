@@ -114,6 +114,30 @@ hr{
   margin-bottom: 40px;
 }
 
+.btnPlaceOrder, .btnStartShopping{
+  text-align: right;
+  outline: none;
+  padding: 12px 14px ;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 12px;
+  border: 2px solid #e6eae9;
+  cursor:pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  color: #e6eae9;
+  background: #03396c;
+  margin-top: 15px;
+}
+
+.btnPlaceOrder:hover, .btnStartShopping:hover{
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+  color: white;
+  box-shadow: 0px 0px 20px #88aed0;
+}
+
+
 .show{
   display: block;
 }

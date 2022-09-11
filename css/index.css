@@ -27,49 +27,6 @@ h1{
   font-family: 'Varela Round', sans-serif;
   margin-top: 200px;
 }
-
-.bg-modal{
-  width: 100%;
-  height: 100%;
-  background-color: rgba(108, 134, 147, 0.8);
-  position: absolute;
-  top:0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-#modal-msg{
-  margin-top: 60px;
-}
-
-.modal-content{
- width: 500px;
- height: 500px;
- background-color: #6c8693;
- border-radius: 6px;
- text-align: center;
- padding: 20px;
- border: 20px solid #e6eae9;
- position: relative;
-}
-
-input{
-  width: 50%;
-  display: block;
-  margin: 15px auto;
-  border: 5px solid #e6eae9;
-  border-radius: 6px;
-  padding: 10px;
-
-}
-
-input:focus{
-  outline-color: #899ea9;
-}
-
-
 .buttom{
   background-color: none;
   color: white;
@@ -83,31 +40,5 @@ input:focus{
   background-color: #03396c;
   color: white;
   border: none;
-}
-
-.div-btn, .div-form{
-  margin-top: 35px;
-}
-
-.close{
-  position: absolute;
-  top: 0;
-  right: 14px;
-  font-size: 42px;
-  transform: rotate(45deg);
-  color: white;
-  cursor: pointer
-}
-
-.dontworry{
-  color: #cecece;
-}
-
-.hide{
-  display: none;
-}
-
-.show{
-  display: block;
 }
 

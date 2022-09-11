@@ -39,6 +39,8 @@ for (let i = 0; i < produtoObjeto.length; i++) {
   const nome = produtoObjeto[i].nomeProd;
   const tipo = produtoObjeto[i].tipo;
   const preco = produtoObjeto[i].preco;
+  const tamanhoRR = produtoObjeto[i].tamanhoR;
+  const tamanhoSS = produtoObjeto[i].tamanhoS;
   const paiDoPai = document.getElementById('outter');
   const elemPaiCarrinho = document.createElement('div');
   elemPaiCarrinho.classList.add('container');
@@ -56,9 +58,9 @@ for (let i = 0; i < produtoObjeto.length; i++) {
   const liTipoProd = document.createElement('li');
   const liSizeRoupa = document.createElement('li');
   liTipoProd.textContent = tipo;
-  liSizeRoupa.textContent = `tamanhoRoupaUser`;
+  liSizeRoupa.textContent = `clothes size: ${tamanhoRR}`;
   const liSizeSapato = document.createElement('li');
-  liSizeSapato.textContent = `tamanhoSapatoUser`;
+  liSizeSapato.textContent = `shoes size: ${tamanhoSS}`;
   const precoProdutoDiv = document.createElement('div');
   precoProdutoDiv.classList.add('box3');
   const ulPrecoProduto = document.createElement('ul');
@@ -82,4 +84,15 @@ for (let i = 0; i < produtoObjeto.length; i++) {
   ulPrecoProduto.appendChild(liPrecoProduto);
 }
 
-//localStorage.clear();
+const btnPlOrder = document.getElementById('place-order-id');
+btnPlOrder.addEventListener('click', function () {
+  alert('Sua compra foi realizada com sucesso!');
+  localStorage.clear();
+  qtdeCarrinho = qtdeCart.textContent = 0;
+  const carrinhoEstaVazio = document.getElementById('empty-cart');
+  const showCompras = document.getElementById('not-empty-cart');
+  carrinhoEstaVazio.classList.remove('hide');
+  carrinhoEstaVazio.classList.add('show');
+  showCompras.classList.remove('show');
+  showCompras.classList.add('hide');
+});

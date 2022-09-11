@@ -98,9 +98,7 @@ textarea:focus{
 
 #form-container{
   display: flex;
-  
   border: 16px solid #f6f6f6;
-
   box-shadow: 0px 0px 20px #88aed0;
 }
 
