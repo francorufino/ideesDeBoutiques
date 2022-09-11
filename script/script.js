@@ -852,10 +852,6 @@ var PRODUTOS = {
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //CRIANDO OS CARDS VIA DOM E DO TAMANHO DO BANCO DE DADOS
 
-// .sizeRoupaWrapper span
-// .sizeSaptosWrapper span
-// .sizeRoupaWrapper span, .sizeSaptosWrapper span
-
 let nomesProdutos = Object.keys(PRODUTOS);
 shuffleArray(nomesProdutos);
 
@@ -958,13 +954,6 @@ for (let obj in nomesProdutos) {
   spanRoupaSizeXL.addEventListener('click', function () {
     tamanhoRoupaUser = 'XL';
   });
-
-  // spanRoupaSize.textContent = `$${PRODUTOS[obj].tamanhoR}`;
-
-  // const divSapatoSizeWrapper = document.createElement('div');
-  // spanSapatoSize.setAttribute('id', 'sizeRoupa');
-  // spanSapatoSize.classList.add('sizeRSapato');
-  // spanSapatoSize.textContent = `$${PRODUTOS[obj].tamanhoR}`;
 
   const divSaptosSizeWrapper = document.createElement('div');
   divSaptosSizeWrapper.setAttribute('id', 'sizeSaptosWrapper');
@@ -1163,9 +1152,3 @@ for (let obj in nomesProdutos) {
   divContainerButtons.appendChild(btnBuyNow);
   divContainerButtons.appendChild(btnAddToCart);
 }
-
-// var theObject = { name: { firstName: 'Mark', lastName: 'Bob' } };
-// const string = JSON.stringify(theObject);
-// alert(string);
-// const objetoo = JSON.parse(string.theObject);
-// alert(objetoo);
