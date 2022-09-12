@@ -222,12 +222,6 @@ var PRODUTOS = {
     imgFile: './images/c14.jpeg',
   },
 
-  josefinne: {
-    preco: 50,
-    tipo: 'classic',
-    qdeEstoque: 200,
-    imgFile: '/images/classic7.jpeg',
-  },
   emilly: {
     preco: 41,
     tipo: 'party',
