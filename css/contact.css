@@ -13,19 +13,23 @@ main{
 }
 
 form{
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 label{
+  margin-left: 6px;
+}
+
+#formInput{
   margin-left: 30px;
 }
 
 input{
-  margin: 0;
   padding: 6px;
-  width: 90%;
   background: #cecece;
   margin: 0 auto;
+  border:   6px solid #f6f6f6;
+  width: 90%;
 }
 
 input:focus{
@@ -36,11 +40,10 @@ textarea{
   border: none;
   resize: none;
   width: 90%;
-  border: 5px solid #e6eae9;
+  border: 6px solid #f6f6f6;
   background: #cecece;
   font-family: 'Varela Round', sans-serif;
   margin: 0 auto;
-  margin-left: 29px;
 }
 
 textarea:focus{
@@ -72,7 +75,6 @@ textarea:focus{
 }
 
 #contact-btn-submit{
-  margin-top: 20px;
   width: 20%;
   outline: none;
   padding: 10px 0;
@@ -85,15 +87,16 @@ textarea:focus{
   transition: all 0.3s ease;
   color: #e6eae9;
   background: #899ea9;
-  margin: 0  auto;
+  margin: auto 35%;
   margin-top: 20px;
-
+  
 }
 
 #contact-btn-submit:hover{
   color: white ;
   border: 2px solid #03396c ;
   background: #03396c;
+  
 }
 
 #form-container{

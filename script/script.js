@@ -6,8 +6,6 @@ let shoppingCart = localStorage.getItem('counter');
 let shoppingCartNum = Number(shoppingCart);
 let count = shoppingCartNum;
 
-console.log('inicio carrinho' + shoppingCartNum);
-
 function addToCart(nomeProduto) {
   const novoProduto = new Produto(
     nomeProduto,
@@ -15,11 +13,8 @@ function addToCart(nomeProduto) {
     tamanhoSapatoUser,
   );
   novoProduto.stringificar();
-
   carrinho.push(novoProduto);
-
   console.log(carrinho);
-
   return novoProduto;
 }
 
@@ -1084,13 +1079,14 @@ for (let obj in nomesProdutos) {
             2500,
             'easeInOutExpo',
           );
-        console.log('inicio carrinho la' + shoppingCartNum);
+
         setTimeout(function () {
           count++;
           $('.cart-nav .item-count').text(count);
           $('.cart-nav .item-count.carrinho').text(count);
           $('.sizeRoupaWrapper span').removeClass('active');
           $('.sizeSaptosWrapper span').removeClass('active');
+
           const produtoEmFormatoJSON = JSON.stringify(carrinho);
           localStorage.setItem('produto', produtoEmFormatoJSON);
           console.log('carrinho json ' + produtoEmFormatoJSON);

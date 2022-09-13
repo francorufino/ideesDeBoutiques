@@ -23,7 +23,6 @@ hr{
 }
 
 .outterContainer{
-  
   margin: 0 auto;
   box-sizing: border-box;
   margin-top: 150px;
@@ -91,7 +90,7 @@ hr{
 } 
 
 .box1 img{
-  width: 70%;
+  width: 60%;
   height: 100%;
   border: 4px solid #f6f6f6; 
   margin: 0 auto;
