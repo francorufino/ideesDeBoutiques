@@ -92,9 +92,8 @@ btnPlOrder.addEventListener('click', function () {
       confimButton: 'confirm',
     },
     title: 'Your order has been placed!',
-    confirmButton: 'OK',
     confirmButtonColor: '#03396c',
-    confirmButtonText: 'cool',
+    confirmButtonText: 'OK',
   });
   localStorage.clear();
   qtdeCarrinho = qtdeCart.textContent = 0;
