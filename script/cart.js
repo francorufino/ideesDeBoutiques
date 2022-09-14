@@ -86,7 +86,16 @@ for (let i = 0; i < produtoObjeto.length; i++) {
 
 const btnPlOrder = document.getElementById('place-order-id');
 btnPlOrder.addEventListener('click', function () {
-  alert('Sua compra foi realizada com sucesso!');
+  Swal.fire({
+    customClass: {
+      popup: 'sweetAlertCart',
+      confimButton: 'confirm',
+    },
+    title: 'Your order has been placed!',
+    confirmButton: 'OK',
+    confirmButtonColor: '#03396c',
+    confirmButtonText: 'cool',
+  });
   localStorage.clear();
   qtdeCarrinho = qtdeCart.textContent = 0;
   const carrinhoEstaVazio = document.getElementById('empty-cart');

@@ -1,0 +1,18 @@
+.sweetAlertCart{
+  border: 16px solid #f6f6f6!important;
+  border-radius: 12px!important;
+  background-color: #ebefed!important;
+  color: #03396c!important;
+}
+
+.confirm:hover{
+  background-color: black!important;
+  background: blueviolet!important;
+}
+
+.sweet-alert button:hover { 
+  background:'#2b5c79'; 
+  -webkit-transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out; 
+}
+
