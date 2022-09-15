@@ -19,19 +19,23 @@ for (let i = 0; i < produtoObjeto.length; i++) {
   const subtotRodape = document.getElementById('subtotal-cart-rodape');
   subtotRodape.textContent = `$${sum.toFixed(2)}`;
 
-  if (produtoObjeto.length > 0) {
+  const mostraProdutos = () => {
     const carrinhoEstaVazio = document.getElementById('empty-cart');
     const showCompras = document.getElementById('not-empty-cart');
     carrinhoEstaVazio.classList.remove('show');
     carrinhoEstaVazio.classList.add('hide');
     showCompras.classList.remove('hide');
     showCompras.classList.add('show');
-  } else {
+  };
+
+  const escondeProdutos = () => {
     carrinhoEstaVazio.classList.remove('hide');
     carrinhoEstaVazio.classList.add('show');
     showCompras.classList.remove('show');
     showCompras.classList.add('hide');
-  }
+  };
+
+  produtoObjeto.length > 0 ? mostraProdutos() : escondeProdutos();
 
   const shoppingC = localStorage.setItem('counter', sera);
 
