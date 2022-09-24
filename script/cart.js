@@ -1,16 +1,23 @@
 let qtdeCart = document.getElementById('counterCart');
-let qtdeCarrinho = (qtdeCart.textContent = 0);
-let sum = 0;
-const produto = localStorage.getItem('produto');
-const produtoObjeto = JSON.parse(produto);
+let cartLocStorString = localStorage.getItem('cart');
+let cartLocStorObject = JSON.parse(cartLocStorString);
+if (cartLocStorObject != null) {
+  var contagem = cartLocStorObject.length;
+  qtdeCart.innerHTML = contagem;
+} else {
+  qtdeCart.innerHTML = 0;
+}
 
 const nada = document.getElementById('vazio');
+const produtoString = localStorage.getItem('produto');
+const produtoObjeto = JSON.parse(produtoString);
+let sum = 0;
 
-for (let i = 0; i < produtoObjeto.length; i++) {
-  qtdeCart.textContent = produtoObjeto.length;
-  const sera = produtoObjeto.length;
-  console.log('sera' + sera);
-  console.log(typeof sera);
+for (let i = 0; i < contagem; i++) {
+  qtdeCart.textContent = contagem;
+  const produtosTamanho = produtoObjeto.length;
+  console.log('produtosTamanho' + produtosTamanho);
+  console.log(typeof produtosTamanho);
   console.log(typeof produtoObjeto[i].preco);
   if (produtoObjeto[i].preco !== 0) {
     sum += produtoObjeto[i].preco;
@@ -37,7 +44,7 @@ for (let i = 0; i < produtoObjeto.length; i++) {
 
   produtoObjeto.length > 0 ? mostraProdutos() : escondeProdutos();
 
-  const shoppingC = localStorage.setItem('counter', sera);
+  const shoppingC = localStorage.setItem('counter', produtosTamanho);
 
   const img = produtoObjeto[i].imgFile;
   const nome = produtoObjeto[i].nomeProd;

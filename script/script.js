@@ -1,10 +1,28 @@
-let carrinho = [];
 let tamanhoRoupaUser;
 let tamanhoSapatoUser;
 let wrapper;
-let shoppingCart = localStorage.getItem('counter');
-let shoppingCartNum = Number(shoppingCart);
-let count = shoppingCartNum;
+
+var showCartNumSync = document.getElementById('number');
+let carrinho = localStorage.getItem('cart');
+let cartLocStor = JSON.parse(carrinho);
+if (cartLocStor != null) {
+  var contagem = cartLocStor.length;
+  showCartNumSync.innerHTML = contagem;
+} else {
+  showCartNumSync.innerHTML = 0;
+}
+function cartNaoNulo() {
+  console.log(carrinho + 'testttttt');
+  var showCartNumSync = document.getElementById('number');
+}
+
+function cartSimNulo() {
+  var showCartNumSync = document.getElementById('number');
+  showCartNumSync.innerText = 0;
+}
+
+carrinho = cartLocStor;
+carrinho == null ? cartSimNulo() : cartNaoNulo();
 
 function addToCart(nomeProduto) {
   const novoProduto = new Produto(
@@ -13,9 +31,15 @@ function addToCart(nomeProduto) {
     tamanhoSapatoUser,
   );
   novoProduto.stringificar();
+
+  if (carrinho == null) {
+    carrinho = [];
+    cartSimNulo();
+  }
+
   carrinho.push(novoProduto);
-  console.log(carrinho);
-  return novoProduto;
+  localStorage.setItem('cart', JSON.stringify(carrinho));
+  cartNaoNulo();
 }
 
 class Produto {
@@ -1036,75 +1060,74 @@ for (let obj in nomesProdutos) {
     $(this).addClass('active');
   });
 
-  //
   btnAddToCart.addEventListener('click', function () {
     addToCart(`${obj}`);
-    wrapper = document.getElementById('wrapper');
+    let carrinho = JSON.parse(localStorage.getItem('cart'));
 
-    count = 0;
+    if (carrinho != null) {
+      var carrinhoCounter = carrinho.length;
+      const produtoEmFormatoJSON = JSON.stringify(carrinho);
+      localStorage.setItem('produto', produtoEmFormatoJSON);
+      console.log('carrinho json ' + produtoEmFormatoJSON);
+      wrapper = document.getElementById('wrapper');
+    }
 
-    //if add to cart btn clicked
-    $('.cart-btn').on('click', function () {
-      let cart = $('.cart-nav');
-      // find the img of that card which button is clicked by user
-      let imgtodrag = $(this)
-        .parent('.buttons')
-        .parent('.content')
-        .parent('.card')
-        .find('img')
-        .eq(0);
-      if (imgtodrag) {
-        // duplicate the img
-        var imgclone = imgtodrag
-          .clone()
-          .offset({
-            top: imgtodrag.offset().top,
-            left: imgtodrag.offset().left,
-          })
-          .css({
-            opacity: '0.8',
-            position: 'absolute',
-            height: '150px',
-            width: '150px',
-            'z-index': '1000',
-          })
-          .appendTo($('body'))
-          .animate(
-            {
-              top: cart.offset().top + 20,
-              left: cart.offset().left + 30,
-              width: 75,
-              height: 75,
-            },
-            2500,
-            'easeInOutExpo',
-          );
+    count = carrinhoCounter;
 
-        setTimeout(function () {
-          count++;
-          $('.cart-nav .item-count').text(count);
-          $('.cart-nav .item-count.carrinho').text(count);
-          $('.sizeRoupaWrapper span').removeClass('active');
-          $('.sizeSaptosWrapper span').removeClass('active');
-
-          const produtoEmFormatoJSON = JSON.stringify(carrinho);
-          localStorage.setItem('produto', produtoEmFormatoJSON);
-          console.log('carrinho json ' + produtoEmFormatoJSON);
-
-          return count;
-        }, 1500);
-
-        imgclone.animate(
+    let cart = $('.cart-nav');
+    let imgtodrag = $(this)
+      .parent('.buttons')
+      .parent('.content')
+      .parent('.card')
+      .find('img')
+      .eq(0);
+    if (imgtodrag) {
+      var imgclone = imgtodrag
+        .clone()
+        .offset({
+          top: imgtodrag.offset().top,
+          left: imgtodrag.offset().left,
+        })
+        .css({
+          opacity: '0.8',
+          position: 'absolute',
+          height: '150px',
+          width: '150px',
+          'z-index': '1000',
+        })
+        .appendTo($('body'))
+        .animate(
           {
-            width: 0,
-            height: 0,
+            top: cart.offset().top + 20,
+            left: cart.offset().left + 30,
+            width: 75,
+            height: 75,
           },
-          function () {
-            $(this).detach();
-          },
+          2500,
+          'easeInOutExpo',
         );
-      }
-    });
+
+      setTimeout(function () {
+        // count++;
+
+        $('.cart-nav .item-count').text(count);
+        $('.cart-nav .item-count.carrinho').text(count);
+        $('.sizeRoupaWrapper span').removeClass('active');
+        $('.sizeSaptosWrapper span').removeClass('active');
+
+        return count;
+      }, 1500);
+
+      imgclone.animate(
+        {
+          width: 0,
+          height: 0,
+        },
+        function () {
+          $(this).detach();
+        },
+      );
+    }
   });
 
   elemPai.appendChild(divCardContainer);
@@ -1115,7 +1138,6 @@ for (let obj in nomesProdutos) {
   divDetailsWrapper.appendChild(spanNomeProduto);
   divDetailsWrapper.appendChild(paragTipoProduto);
   divRow.appendChild(divPrecoProd);
-
   divContainerDescProduto.appendChild(divRoupaSizeWrapper);
   divRoupaSizeWrapper.appendChild(spanRoupaSize);
   divRoupaSizeWrapper.appendChild(spanRoupaSizeXS);
@@ -1123,21 +1145,14 @@ for (let obj in nomesProdutos) {
   divRoupaSizeWrapper.appendChild(spanRoupaSizeM);
   divRoupaSizeWrapper.appendChild(spanRoupaSizeL);
   divRoupaSizeWrapper.appendChild(spanRoupaSizeXL);
-
   divContainerDescProduto.appendChild(divSaptosSizeWrapper);
   divSaptosSizeWrapper.appendChild(spanSaptosSize);
   divSaptosSizeWrapper.appendChild(spanSaptosSize5);
-  //divSaptosSizeWrapper.appendChild(spanSaptosSize55);
   divSaptosSizeWrapper.appendChild(spanSaptosSize6);
-  //divSaptosSizeWrapper.appendChild(spanSaptosSize65);
   divSaptosSizeWrapper.appendChild(spanSaptosSize7);
-  //divSaptosSizeWrapper.appendChild(spanSaptosSize75);
   divSaptosSizeWrapper.appendChild(spanSaptosSize8);
-  //divSaptosSizeWrapper.appendChild(spanSaptosSize85);
   divSaptosSizeWrapper.appendChild(spanSaptosSize9);
-  //divSaptosSizeWrapper.appendChild(spanSaptosSize95);
   divSaptosSizeWrapper.appendChild(spanSaptosSize10);
-
   divContainerDescProduto.appendChild(divContainerButtons);
   divContainerButtons.appendChild(btnBuyNow);
   divContainerButtons.appendChild(btnAddToCart);
