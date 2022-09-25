@@ -1057,7 +1057,6 @@ for (let obj in nomesProdutos) {
       Toastify({
         text: 'Choose a size',
         duration: 5000,
-        destination: 'https://github.com/apvarun/toastify-js',
         newWindow: true,
         close: true,
         gravity: 'bottom', // `top` or `bottom`
@@ -1065,6 +1064,13 @@ for (let obj in nomesProdutos) {
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
           background: 'red',
+          borderRadius: '12px',
+          fontWeight: '700px',
+          border: '4px solid #03396c',
+          borderColor: 'white',
+          padding: '16px 32px',
+          color: 'white',
+          fontSize: '1.1rem',
         },
         onClick: function () {}, // Callback after click
       }).showToast();
