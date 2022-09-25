@@ -7,8 +7,23 @@
   padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
+  margin-top: 30px;
   position: relative;
+}
+
+.filter-bg{
+  margin-top: 100px;
+  position: absolute;
+  position: fixed;
+  z-index: 8;
+  width: 100%;
+  background: #cecece;
+  padding-top: 10px;
+  padding-bottom: 20px
+}
+
+#titulo-home-id{
+  margin-top: 270px;
 }
 
 .wrapper .cart-nav{
