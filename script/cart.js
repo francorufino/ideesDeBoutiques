@@ -44,8 +44,6 @@ for (let i = 0; i < contagem; i++) {
 
   produtoObjeto.length > 0 ? mostraProdutos() : escondeProdutos();
 
-  const shoppingC = localStorage.setItem('counter', produtosTamanho);
-
   const img = produtoObjeto[i].imgFile;
   const nome = produtoObjeto[i].nomeProd;
   const tipo = produtoObjeto[i].tipo;

@@ -11,18 +11,8 @@ if (cartLocStor != null) {
 } else {
   showCartNumSync.innerHTML = 0;
 }
-function cartNaoNulo() {
-  console.log(carrinho + 'testttttt');
-  var showCartNumSync = document.getElementById('number');
-}
-
-function cartSimNulo() {
-  var showCartNumSync = document.getElementById('number');
-  showCartNumSync.innerText = 0;
-}
 
 carrinho = cartLocStor;
-carrinho == null ? cartSimNulo() : cartNaoNulo();
 
 function addToCart(nomeProduto) {
   const novoProduto = new Produto(
@@ -34,12 +24,10 @@ function addToCart(nomeProduto) {
 
   if (carrinho == null) {
     carrinho = [];
-    cartSimNulo();
   }
 
   carrinho.push(novoProduto);
   localStorage.setItem('cart', JSON.stringify(carrinho));
-  cartNaoNulo();
 }
 
 class Produto {
@@ -889,6 +877,8 @@ for (let obj in nomesProdutos) {
   divCardContainer.classList.add('card');
   divCardContainer.classList.add('image');
   divCardContainer.setAttribute('data-name', `${PRODUTOS[obj].tipo}`);
+  divCardContainer.addEventListener('mouseleave', leave);
+  divCardContainer.addEventListener('mouseleave', limpaSelecao);
 
   const imgTag = document.createElement('img');
   imgTag.setAttribute('id', 'img-id');
@@ -1050,6 +1040,8 @@ for (let obj in nomesProdutos) {
   btnAddToCart.classList.add(`buy${obj}`);
   btnAddToCart.textContent = 'ADD TO CART';
 
+  function selection() {}
+
   $('.sizeRoupaWrapper span').click(function () {
     $('.sizeRoupaWrapper span').removeClass('active');
     $(this).addClass('active');
@@ -1061,72 +1053,90 @@ for (let obj in nomesProdutos) {
   });
 
   btnAddToCart.addEventListener('click', function () {
-    addToCart(`${obj}`);
-    let carrinho = JSON.parse(localStorage.getItem('cart'));
+    if (tamanhoRoupaUser == undefined || tamanhoSapatoUser == undefined) {
+      Toastify({
+        text: 'Choose a size',
+        duration: 5000,
+        destination: 'https://github.com/apvarun/toastify-js',
+        newWindow: true,
+        close: true,
+        gravity: 'bottom', // `top` or `bottom`
+        position: 'center', // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: 'red',
+        },
+        onClick: function () {}, // Callback after click
+      }).showToast();
+    } else {
+      addToCart(`${obj}`);
 
-    if (carrinho != null) {
-      var carrinhoCounter = carrinho.length;
-      const produtoEmFormatoJSON = JSON.stringify(carrinho);
-      localStorage.setItem('produto', produtoEmFormatoJSON);
-      console.log('carrinho json ' + produtoEmFormatoJSON);
-      wrapper = document.getElementById('wrapper');
-    }
+      let carrinho = JSON.parse(localStorage.getItem('cart'));
 
-    count = carrinhoCounter;
+      if (carrinho != null) {
+        var carrinhoCounter = carrinho.length;
+        const produtoEmFormatoJSON = JSON.stringify(carrinho);
+        localStorage.setItem('produto', produtoEmFormatoJSON);
+        console.log('carrinho json ' + produtoEmFormatoJSON);
+        wrapper = document.getElementById('wrapper');
+      }
 
-    let cart = $('.cart-nav');
-    let imgtodrag = $(this)
-      .parent('.buttons')
-      .parent('.content')
-      .parent('.card')
-      .find('img')
-      .eq(0);
-    if (imgtodrag) {
-      var imgclone = imgtodrag
-        .clone()
-        .offset({
-          top: imgtodrag.offset().top,
-          left: imgtodrag.offset().left,
-        })
-        .css({
-          opacity: '0.8',
-          position: 'absolute',
-          height: '150px',
-          width: '150px',
-          'z-index': '1000',
-        })
-        .appendTo($('body'))
-        .animate(
+      count = carrinhoCounter;
+
+      let cart = $('.cart-nav');
+      let imgtodrag = $(this)
+        .parent('.buttons')
+        .parent('.content')
+        .parent('.card')
+        .find('img')
+        .eq(0);
+      if (imgtodrag) {
+        var imgclone = imgtodrag
+          .clone()
+          .offset({
+            top: imgtodrag.offset().top,
+            left: imgtodrag.offset().left,
+          })
+          .css({
+            opacity: '0.8',
+            position: 'absolute',
+            height: '150px',
+            width: '150px',
+            'z-index': '1000',
+          })
+          .appendTo($('body'))
+          .animate(
+            {
+              top: cart.offset().top + 20,
+              left: cart.offset().left + 30,
+              width: 75,
+              height: 75,
+            },
+            2500,
+            'easeInOutExpo',
+          );
+
+        setTimeout(function () {
+          // count++;
+
+          $('.cart-nav .item-count').text(count);
+          $('.cart-nav .item-count.carrinho').text(count);
+          $('.sizeRoupaWrapper span').removeClass('active');
+          $('.sizeSaptosWrapper span').removeClass('active');
+
+          return count;
+        }, 1500);
+
+        imgclone.animate(
           {
-            top: cart.offset().top + 20,
-            left: cart.offset().left + 30,
-            width: 75,
-            height: 75,
+            width: 0,
+            height: 0,
           },
-          2500,
-          'easeInOutExpo',
+          function () {
+            $(this).detach();
+          },
         );
-
-      setTimeout(function () {
-        // count++;
-
-        $('.cart-nav .item-count').text(count);
-        $('.cart-nav .item-count.carrinho').text(count);
-        $('.sizeRoupaWrapper span').removeClass('active');
-        $('.sizeSaptosWrapper span').removeClass('active');
-
-        return count;
-      }, 1500);
-
-      imgclone.animate(
-        {
-          width: 0,
-          height: 0,
-        },
-        function () {
-          $(this).detach();
-        },
-      );
+      }
     }
   });
 
@@ -1156,4 +1166,16 @@ for (let obj in nomesProdutos) {
   divContainerDescProduto.appendChild(divContainerButtons);
   divContainerButtons.appendChild(btnBuyNow);
   divContainerButtons.appendChild(btnAddToCart);
+}
+
+document.getElementById('card-id').addEventListener('mouseleave', leave);
+
+function leave() {
+  $('.sizeRoupaWrapper span').removeClass('active');
+  $('.sizeSaptosWrapper span').removeClass('active');
+}
+
+function limpaSelecao() {
+  tamanhoRoupaUser = undefined;
+  tamanhoSapatoUser = undefined;
 }
