@@ -103,13 +103,16 @@ btnPlOrder.addEventListener('click', function () {
     title: 'Your order has been placed!',
     confirmButtonColor: '#03396c',
     confirmButtonText: 'OK',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.clear();
+      qtdeCarrinho = qtdeCart.textContent = 0;
+      const carrinhoEstaVazio = document.getElementById('empty-cart');
+      const showCompras = document.getElementById('not-empty-cart');
+      carrinhoEstaVazio.classList.remove('hide');
+      carrinhoEstaVazio.classList.add('show');
+      showCompras.classList.remove('show');
+      showCompras.classList.add('hide');
+    }
   });
-  localStorage.clear();
-  qtdeCarrinho = qtdeCart.textContent = 0;
-  const carrinhoEstaVazio = document.getElementById('empty-cart');
-  const showCompras = document.getElementById('not-empty-cart');
-  carrinhoEstaVazio.classList.remove('hide');
-  carrinhoEstaVazio.classList.add('show');
-  showCompras.classList.remove('show');
-  showCompras.classList.add('hide');
 });
