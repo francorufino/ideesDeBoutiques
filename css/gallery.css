@@ -19,7 +19,21 @@
   width: 100%;
   background: #cecece;
   padding-top: 10px;
-  padding-bottom: 20px
+  padding-bottom: 20px;
+}
+
+.wrapperFilter span.item{
+  color:#09396c;
+  border: 1px solid #09396c;
+}
+
+.wrapperFilter span.item{
+  color:#09396c;
+  border: 1px solid #09396c;
+}
+
+.wrapperFilter span.item.active{
+  color: white;
 }
 
 #titulo-home-id{

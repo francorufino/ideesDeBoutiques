@@ -46,15 +46,15 @@
       <div id="form-container">
         <div>
           <h2 id="titulo-contact">How can we help you?</h2>
-          <form action="">
+          <form id="formContact" action="">
             <div id="formInput">
-              <label for="fname">First name</label><br>
-              <input type="text" id="fname" name="fname"><br>
-              <label for="lname">Last name</label><br>
-              <input type="text" id="lname" name="lname"><br>
+              <label for="fname">Full name</label><br>
+              <input type="text" id="from_name" name="fname"><br>
+              <label for="lname">Email</label><br>
+              <input type="email" id="from_email" name="lname"><br>
               <label for="message">Message</label><br>
               <textarea name="message" id="message" cols="45" rows="4"></textarea>
-              <input id="contact-btn-submit" type="submit">
+              <button class="send" id="contact-btn-submit" type="submit">Send</button>
             </div>
           </form>
         </div>
@@ -73,10 +73,14 @@
       <a class="logo" href="./index.html">Idées de Boutiques</a></span><span> | All rights reserved
     </div>
   </footer>
-</body>
-
-</html>
-
+  <script src="./script/contact.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("5fU3-teBqIMEiDP_f");
+    })();
+  </script>
 </body>
 
 </html>

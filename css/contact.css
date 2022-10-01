@@ -26,7 +26,6 @@ label{
 
 input{
   padding: 6px;
-  background: #cecece;
   margin: 0 auto;
   border:   6px solid #f6f6f6;
   width: 90%;
@@ -41,13 +40,22 @@ textarea{
   resize: none;
   width: 90%;
   border: 6px solid #f6f6f6;
-  background: #cecece;
   font-family: 'Varela Round', sans-serif;
   margin: 0 auto;
 }
 
 textarea:focus{
   outline-color: #899ea9;
+}
+
+input[type="text"], input[type="email"], textarea {
+  background-color : #cecece; 
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #cecece inset !important;
 }
 
 .container{
@@ -58,7 +66,6 @@ textarea:focus{
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px;
-  
 }
 
 #contact-img{
@@ -89,19 +96,19 @@ textarea:focus{
   background: #899ea9;
   margin: auto 35%;
   margin-top: 20px;
-  
+  border-radius: 6px; 
 }
 
 #contact-btn-submit:hover{
   color: white ;
   border: 2px solid #03396c ;
   background: #03396c;
-  
 }
 
 #form-container{
   display: flex;
   border: 16px solid #f6f6f6;
+  border-radius: 6px;
   box-shadow: 0px 0px 20px #88aed0;
 }
 
