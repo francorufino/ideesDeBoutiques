@@ -5,6 +5,8 @@ let wrapper;
 var showCartNumSync = document.getElementById('number');
 let carrinho = localStorage.getItem('cart');
 let cartLocStor = JSON.parse(carrinho);
+let buyNow = localStorage.getItem('buyNow');
+let buyNowLocStor = JSON.parse(buyNow);
 if (cartLocStor != null) {
   var contagem = cartLocStor.length;
   showCartNumSync.innerHTML = contagem;
@@ -1040,8 +1042,6 @@ for (let obj in nomesProdutos) {
   btnAddToCart.classList.add(`buy${obj}`);
   btnAddToCart.textContent = 'ADD TO CART';
 
-  function selection() {}
-
   $('.sizeRoupaWrapper span').click(function () {
     $('.sizeRoupaWrapper span').removeClass('active');
     $(this).addClass('active');
@@ -1052,28 +1052,52 @@ for (let obj in nomesProdutos) {
     $(this).addClass('active');
   });
 
+  btnBuyNow.addEventListener('click', function () {
+    if (tamanhoRoupaUser == undefined || tamanhoSapatoUser == undefined) {
+      toastChooseSize();
+    } else {
+      Swal.fire({
+        customClass: {
+          popup: 'sweetAlertBuyNow',
+          confimButton: 'confirm',
+        },
+        title: `${obj}`.charAt(0).toUpperCase() + obj.slice(1),
+        text: "<img src='" + `${PRODUTOS[obj].img}` + "' style='width:150px;'>",
+        html:
+          "<img  src='" +
+          `${PRODUTOS[obj].imgFile}` +
+          "' style='width:100px; margin:0 auto; '>" +
+          '<br>' +
+          'Size: ' +
+          tamanhoRoupaUser +
+          '<br>' +
+          'Shoe size: ' +
+          tamanhoSapatoUser +
+          '<br>' +
+          'Style: ' +
+          `${PRODUTOS[obj].tipo}` +
+          '<br>' +
+          'Price: $' +
+          `${PRODUTOS[obj].preco}` +
+          '.00' +
+          '<br>' +
+          'Quant: 1 full outfit',
+
+        confirmButtonColor: '#03396c',
+        confirmButtonText: 'BUY NOW',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          toastPlacedOrder();
+        }
+      });
+      $('.sizeRoupaWrapper span').removeClass('active');
+      $('.sizeSaptosWrapper span').removeClass('active');
+    }
+  });
+
   btnAddToCart.addEventListener('click', function () {
     if (tamanhoRoupaUser == undefined || tamanhoSapatoUser == undefined) {
-      Toastify({
-        text: 'Choose a size',
-        duration: 5000,
-        newWindow: true,
-        close: true,
-        gravity: 'bottom', // `top` or `bottom`
-        position: 'center', // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-          background: 'red',
-          borderRadius: '12px',
-          fontWeight: '700px',
-          border: '4px solid #03396c',
-          borderColor: 'white',
-          padding: '16px 32px',
-          color: 'white',
-          fontSize: '1.1rem',
-        },
-        onClick: function () {}, // Callback after click
-      }).showToast();
+      toastChooseSize();
     } else {
       addToCart(`${obj}`);
 
@@ -1184,4 +1208,50 @@ function leave() {
 function limpaSelecao() {
   tamanhoRoupaUser = undefined;
   tamanhoSapatoUser = undefined;
+}
+
+function toastChooseSize() {
+  Toastify({
+    text: 'Choose a size',
+    duration: 5000,
+    newWindow: true,
+    close: true,
+    gravity: 'bottom', // `top` or `bottom`
+    position: 'center', // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: 'red',
+      borderRadius: '12px',
+      fontWeight: '700px',
+      border: '4px solid #03396c',
+      borderColor: 'white',
+      padding: '16px 32px',
+      color: 'white',
+      fontSize: '1.1rem',
+    },
+    onClick: function () {}, // Callback after click
+  }).showToast();
+}
+
+function toastPlacedOrder() {
+  Toastify({
+    text: 'Your order has been placed!',
+    duration: 5000,
+    newWindow: true,
+    close: true,
+    gravity: 'bottom', // `top` or `bottom`
+    position: 'center', // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: '#03396c',
+      borderRadius: '12px',
+      fontWeight: '700px',
+      border: '4px solid #03396c',
+      borderColor: 'white',
+      padding: '16px 32px',
+      color: 'white',
+      fontSize: '1.1rem',
+    },
+    onClick: function () {}, // Callback after click
+  }).showToast();
 }
