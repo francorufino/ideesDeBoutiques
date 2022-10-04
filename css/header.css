@@ -76,17 +76,3 @@
 .header-menu a:hover{
   color: white;
 }
-
-@media (max-width: 800px){
-  .header{
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    font-size: 1rem;
-  }
-
-  .header a{
-    background: #f9f9f9;
-    border-radius: 6px;
-  }
-}
