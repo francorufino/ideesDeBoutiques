@@ -19,6 +19,7 @@ h3{
 p{
   margin-top: 20px;
   font-size: 1rem;
+  padding-right: 15px;
 }
 
 .outterContainerAbout{
@@ -116,19 +117,23 @@ p{
   .container-right{
     margin-top: 40px;
   }
-  
+
+  #annabelle{
+    min-width: 232px;
+    max-height: 232px;
+    box-sizing: initial;
+  }
 }
 
-
 @media (max-width: 570px) {
+
+  img{
+    min-width: 232px;
+    min-height: 232px;
+    box-sizing: initial;
+  }
+
   #weareopen{
     display: none;
   }
-
-  #annabelle{
-    width: 200px;
-  height: 200px;
-  box-sizing: initial;
-  }
-
 }
